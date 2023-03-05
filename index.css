@@ -1,0 +1,566 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    height: fit-content;
+}
+
+#main-container{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.8)), url(assets/images/developer-Maxwell.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#main-width{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #logo i{
+    border: 2px solid rgb(155, 155, 49);
+    height: 55px;
+    width: 55px;
+    background: transparent;
+    color: rgb(201, 201, 43);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+header #logo a{
+    text-decoration: none;
+
+}
+
+@media (max-width: 668px){
+    #nav-list{
+       display: none;
+    }
+
+    #menu i{
+        font-size: 20px;
+        color: rgb(181, 194, 231);
+        position: right;
+        cursor: pointer;
+        margin: 18px;
+        
+     }
+
+     #sidebar{
+        height: 100vh;
+        background: rgb(45, 102, 40);
+        overflow: hidden;
+        width: 16rem;
+        transition: 2s;
+        right: -40rem;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        transition: 0.4s;
+     }
+
+     #sidebar ul li a{
+        list-style: none;
+        text-align: center;
+        display: block;
+        padding: 8px;
+        margin: 25px;
+        color: #eee;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid #eee;
+        border-radius: 90px;
+        box-shadow: 1px 2px;
+
+     }
+
+     #sidebar ul li{
+        display: block;
+        text-decoration: none;
+        color: white;
+
+     }
+
+     header{
+        margin: 0;
+     }
+}
+
+@media(min-width: 668px){
+    #menu i{
+        display: none;
+    }
+    #sidebar{
+        display: none;
+    }
+}
+
+nav #nav-list{
+    list-style: none;
+}
+
+nav #nav-list li{
+    display: inline-block;
+
+}
+nav #nav-list li a{
+    display:inline-block;
+    color: #eee;
+    margin-left: 55px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+nav #nav-list li a:hover{
+    transform:scale(1.3);
+    transition: .4s;
+}
+
+
+nav #nav-list li a i{
+    margin: 4px;
+    font-size: 25px;
+    color: rgb(192, 219, 229);
+}
+
+nav #nav-list #btn a{
+    color: #2ecc71;
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #2ecc71;
+    padding: 4px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+nav #nav-list #btn:hover a{
+    background: #2ecc71;
+    color: #eee;
+    transform: scale(0.98);
+    border: 2px;
+}
+
+#container{
+    padding-top: 190px;
+}
+
+#textarea{
+    margin-bottom: 40px; 
+}
+
+#textarea h1{
+    color: #eee;
+    font-family:'Arial Narrow Bold', sans-serif;
+    font-size: 44px;
+    line-height: 1.7;
+    margin: 20px 0px 20px;
+}
+
+#textarea h1 span{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #2ecc71;
+}
+
+#textarea h3{
+    color: #2ecc71;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+#textarea p{
+    width: 600px;
+    max-width: 100%;
+    color: #eee;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+#socials a{
+    width: 37px;
+    border: 1px solid #2ecc71;
+    height: 37px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(255 255 255 0.1);
+}
+
+#socials a:hover{
+    background-color: rgb(117, 211, 248);
+
+}
+
+#socials a:hover:nth-child(3){
+    background-color: rgb(32, 120, 235);
+    border: rgb(32, 120, 235);
+}
+
+#socials a:hover:nth-child(4){
+    background-color: #2ecc71;
+}
+
+#textarea button{
+    color: #eee;
+    background: #00ccd3;
+    font-size: 16px;
+    font-weight: 500px;
+    line-height: 24px;
+    padding: 4px 30px;
+    border: 1px solid #2ecc71;
+    border-radius: 30px;
+}
+
+#textarea button:hover{
+    background: transparent;
+    border: 2px solid #eee;
+}
+
+.bottom p{
+    color: #eee;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+
+
+/* Projects html start*/
+
+#projectsSection{
+    color: #fff;
+    align-items: center;
+    justify-content:left;
+    text-align: left;
+    margin: auto;
+    margin-left: 200px;
+}
+
+#projectsSection #pitem a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+#pbox1{
+    display: inline-flex;
+    margin-bottom: 100px;
+}
+
+#pbox2{
+    display: inline-flex;
+    margin-bottom: 100px;
+}
+
+#pbox3{
+    display: inline-flex;
+    margin-bottom: 30px;
+}
+
+#maintitle h1{
+    font-family: 'Lucida Sans';
+    margin-top: 25px;
+    margin-left: 215px;
+    margin-bottom: 100px;
+}
+
+#maintitle h1 span{
+    font-family: 'Lucida Sans';
+    color: #00ccd3;
+}
+
+#pitem{
+    margin-right: 180px;
+}
+
+#pitem img{
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#pitem :hover{
+    transform: scale(1.1);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#pitem #image p{
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+}
+
+@media (max-width: 1045px){
+    #maintitle h1{
+        margin-left: 160px;
+    }
+
+    #projectsSection{
+        margin-left: 70px;
+    }
+
+}
+
+
+
+@media (max-width:870px){
+    #projectsSection{
+        margin-left: 70px;
+    }
+
+    #pbox1{
+        display: block;
+    }
+
+    #pbox2{
+        display: block;
+    }
+
+    #maintitle h1{
+        margin-left: 30px;
+    }
+
+    .description span{
+        border: 1px solid #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    .description span i{
+        
+    }
+
+
+}
+
+
+.description{
+    color: #fff;
+    display: inline-flex;
+    padding: 15px 20px;
+}
+
+.description span{
+    border: 1px solid #fff;
+    width: 40px;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
+.description span :hover{
+    background: #2ecc71;
+    cursor: pointer;
+}
+
+.description span i{
+    color: yellow;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: inline-table;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+
+
+/* Projects html end*/
+
+
+
+
+
+
+
+/* ----hire Html start---- */
+#hireSection{
+margin: auto;
+text-align: center;
+margin-top: 200px;
+border:1px solid #fff;
+width: 27em;
+padding: 80px;
+border-radius: 10%;
+background: radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(
+black 15%,
+transparent 16%
+) 8px 8px,
+radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0
+1px, radial-gradient(
+rgba(255, 255, 255, 0.1) 15%,
+transparent 20%
+) 8px 9px;
+background-color: #282828;
+background-size: 16px 16px;
+}
+
+#hireText h2{
+color: yellowgreen;
+margin-bottom: 50px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+#hireSection p{
+    color: #fff;
+}
+
+.bottom{
+    margin-top: 400px;
+}
+/* ----hire Html end---- */
+
+
+
+
+
+
+/* -------Services start----- */
+
+
+#listContent{
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#listBox{   
+    width: 350px;
+    border-bottom: 20px solid #03a9f4;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+}
+
+#listBox h2{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #03a9f4;
+    padding: 10px 20px;
+    font-size: 25px;
+    text-align: center;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+#listBox h2 i{
+    font-size: 20px;
+    padding: 10px;
+    color: #282828;
+}
+
+#listBox h2 a{
+     text-decoration: none;
+     cursor: auto;
+}
+
+#listBox ul{
+    position: relative;
+    background: #eee;
+    list-style-type:circle;
+    border-radius: 2px;
+    padding: 6px
+  }
+
+#listBox ul li{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 800;
+    width: 100%;
+    box-shadow: 0px 5px 25px black;
+    text-align: center;
+    transition: transform 2s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#listBox ul li:hover{
+    transform: scale(1.1);
+    z-index: 100;
+    background: #25bcff;
+    cursor:grab;
+    box-shadow: 0px 5px 25px black;
+    color: white;
+    opacity: 1;
+}
+
+  #listBox ul :hover li{
+    opacity: 0.2;
+  }
+
+
+#listBox ul li span{
+    width: 20px;
+    height: 20px;
+    color: #eee;
+    display:inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: translateY(-20px);
+}
+
+#listBox ul li :hover span{
+    background: #fff;
+    color: #1fbcff;
+    margin-right: 10px;
+}
+
+
+#listBox li #serviceTxt{
+    color: #2ecc71;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+}
+
+#listBox li #serviceTxt :hover{
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#listBox li{
+    display: inline-block;
+}
+
+
+/* -------Services end----- */
