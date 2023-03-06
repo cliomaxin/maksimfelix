@@ -237,8 +237,14 @@ nav #nav-list #btn:hover a{
     font-weight: 500px;
     line-height: 24px;
     padding: 4px 30px;
-    border: 1px solid #2ecc71;
+    border: 1px solid #fff;
     border-radius: 30px;
+}
+
+#textarea #cover{
+    background: #a240e4;
+    font-size: 14px;
+    border: 1px solid #eee;
 }
 
 #textarea button:hover{
