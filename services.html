@@ -81,8 +81,37 @@
         </div>
     </main>
     
+<!-- Popup start -->
+
+<div class="popup" id="popup">
+    <img src="static/assets/img/suprised-man.png" alt="" >
+    <h2>These are my Professional Documents and Certifications</h2>
+    <p></p>
+    <button type="button" onclick="closePopup()">Close</button>
+  </div>
+  <!-- Popup end -->
 
 
+  <script>  
+    // Popup Animation start
+    
+    let popup = document.getElementById("popup")
+    
+        function openPopup(){
+          popup.classList.add("open-popup")
+        }
+        function closePopup(){
+          popup.classList.remove("open-popup")
+        }
+  
+    let Active = document.getElementById("Active")
+        function active(){
+          alert("Please call this number: +254 752 912 529 to confirm the type of service division for booking and current prices.");
+        }  
+        // Popup Animation start
+  
+    </script>
+  
 <script src="index.js"></script>
 </body>
 </html>

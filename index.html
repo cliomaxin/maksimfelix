@@ -80,15 +80,8 @@
                                 <a href="https://www.linkedin.com/in/dev-maxwell-karanja-715986252" target="_blank"><i class="fab fa-linkedin"></i></a>
                                 <a href="https://wa.link/uoxqvk" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             </div>
-                            <a href="assets/data/CV_MAXWELL-KARANJA.pdf" download="CV_MAXWELL-KARANJA.pdf"><button type="button">Check my CV</button></a>
-                            <a href="assets/data/CL_MAXWELL-KARANJA.pdf" download="CL_MAXWELL-KARANJA.pdf"><button type="button">Cover Letter</button></a>
-                            <select name="" id="">
-                                <option value="1">Certifications</option>
-                                <option value="2">Responsive Web design cerificate</option>
-                                <option value="3">Database administration</option>
-                                <option value="4">Back End Development and APIs</option>
-                            </select>
                             
+                           <button type="button" onclick="openPopup()">Check my Certifications & other Documents</button>
                     </div>
 
                    
@@ -134,11 +127,65 @@
 
 
 
+
+<!-- Popup start -->
+
+<div class="popup" id="popup">
+    <span><i class="fas fa-code"></i></span>
+     <h2>Take a look at my professional Documents</h2>
+     <div class="doc-panel">
+        <a href="assets/data/WEB_DESIGN_CERTIFICATE-MAXWELL_KARANJA.pdf" download="WEB_DESIGN_CERTIFICATE-MAXWELL_KARANJA.pdf" target="_blank"><button type="button" onclick="openPopup()">Web Design Certificate</button>
+        <i class="fas fa-download"></i></a>
+        <select name="" id="">
+            <option value="1">Certifications</option>
+            <option value="2">Responsive Web design cerificate</option>
+            <option value="3">Database administration</option>
+            <option value="4">Back End Development and APIs</option>
+        </select>
+     </div>
+
+     <div class="doc-panel"> <a href="assets/data/CV_MAXWELL-KARANJA.pdf" download="CV_MAXWELL-KARANJA.pdf" target="_blank"><button type="button" onclick="openPopup()">Resume</button>
+        <i class="fas fa-download"></i></a>
+    </div>
+    
+     <div class="doc-panel"><a href="assets/data/CL_MAXWELL-KARANJA.pdf" download="CL_MAXWELL-KARANJA.pdf" target="_blank"><button type="button">Cover Letter</button>
+        <i class="fas fa-download"></i></a>
+    </div>
+
+    <button type="button" onclick="closePopup()" class="close">Close</button>
+  </div>
+  <!-- Popup end -->
+
+
+  <script>  
+    // Popup Animation start
+    
+    let popup = document.getElementById("popup")
+    
+        function openPopup(){
+          popup.classList.add("open-popup")
+        }
+        function closePopup(){
+          popup.classList.remove("open-popup")
+        }
+  
+    let Active = document.getElementById("Active")
+        function active(){
+          alert("Please call this number: +254 752 912 529 to confirm the type of service division for booking and current prices.");
+        }  
+        // Popup Animation start
+  
+    </script>
+  
+
+    
+<!-- Loading javascript start -->
     <script>
         $(window).on("load",function(){
             $(".wrapper").fadeout(slow);
         });
     </script>
+<!-- Loading javascript start -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="index.js"></script> 
 </body>
