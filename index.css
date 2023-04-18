@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
@@ -13,7 +14,6 @@ body{
     padding:0;
     margin:0;
     height:100vh;
-    box-sizing: border-box;
 }
 
 #main-container{
@@ -408,9 +408,10 @@ nav #nav-list #btn:hover a{
 
 /* ----hire Html start---- */
 #hireSection{
-margin: auto;
+margin: 0 auto;
 text-align: center;
-margin-top: 200px;
+margin-top: 100px;
+margin-bottom: 120px;
 border:1px solid #fff;
 width: 27em;
 padding: 80px;
