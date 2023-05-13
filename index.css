@@ -567,6 +567,10 @@ font-family: 'Times New Roman', Times, serif;
 
 
 
+
+
+
+
 /* -------loader start----- */
 
 
@@ -580,6 +584,10 @@ font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+.wrapper-hidden{
+    animation: vanish 1s forwards;
 }
 .circle{
     width:20px;
