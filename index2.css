@@ -1230,6 +1230,16 @@ section:nth-of-type(5) #close {
     border: 2px solid #eee;
   }
 
+  #textarea h1 span{
+    font-family:  Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #2ecc71;
+}
+
+.input{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #2ecc71;
+}
+
  #social-container{
   padding-top: 120px;
     padding-bottom: 20px;
@@ -1396,9 +1406,24 @@ section:nth-of-type(5) #close {
 }
 
 .popup button.close{
-    background: #2ecc71;
+    background: #429665;
     width: 40%;
 }
 /* -------Popup end----- */
 
+.input{
+  font-family: sans-serif;
+  color: rgb(83, 163, 168);
+}
 
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
