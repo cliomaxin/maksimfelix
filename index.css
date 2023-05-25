@@ -902,10 +902,10 @@ section .title::after {
 }
 
 
-.services, .teams {
+.services {
     color: #fff;
     background: #9de7a3;
-    padding-bottom: 3.5%;
+    margin: 20px;
 }
 
 .services .title::before,
