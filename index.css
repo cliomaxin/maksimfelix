@@ -21,7 +21,7 @@ body{
 
 #main-container{
     background: rgba(54, 54, 54, 0.8);
-    height: fit-content;
+
 } 
 
 #main-width{
@@ -436,6 +436,18 @@ font-family: 'Times New Roman', Times, serif;
 
 #hireSection p{
     color: #fff;
+}
+
+@media (max-width: 470px){
+  #hireSection{
+    width: 20em;
+    border-radius: 2%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#hireSection p{
+  width: 100%;
+}
 }
 
 /* ----hire Html end---- */
