@@ -1249,6 +1249,16 @@ section:nth-of-type(5) #close {
     margin-bottom: 160px; 
 }
 
+.action{
+  animation: beat 1.999s infinite alternate;
+	transform-origin: center;
+}
+
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+
   #socials a{
     width: 37px;
     border: 1px solid #2ecc71;

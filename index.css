@@ -204,6 +204,15 @@ nav #nav-list #btn:hover a{
     margin-bottom: 30px;
 }
 
+.action{
+  animation: beat .85s infinite alternate;
+	transform-origin: center;
+}
+
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
 #socials a{
     width: 37px;
     border: 1px solid #2ecc71;
