@@ -1255,7 +1255,7 @@ section:nth-of-type(5) #close {
 }
 
 @keyframes beat{
-	to { transform: scale(1.4); }
+	to { transform: scale(1.2); }
 }
 
 
