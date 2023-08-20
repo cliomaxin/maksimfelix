@@ -1,6 +1,3 @@
-<!--Author: Template Stock
-Author URL: http://templatestock.co
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +23,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	    
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+		
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -37,6 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		});
 	</script>
+<script src="js/index.js"></script>
 
 <link rel="stylesheet" href="fontawesome-free-6.2.0-web\css\all.css">
 <link rel="icon" href="assets\images\icon.png" sizes="32x32">
@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       		 <div class="logo">
 				<a href="index.html"><img src="images/logo.png" alt=""/></a>
 			 </div>
-		   <div class="top-menu">
+		   <div class="top-menu tmsb">
 		   	<span class="menu"> </span>
 			<ul>
 			 	<nav class="cl-effect-5">
@@ -72,6 +72,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</nav>
 			 </ul>
 			 </div>
+
+			 <div id="sidebar">       
+                <div id="menu">
+                    <!-- <i class="fas fa-close" onclick="hideMenu()"></i> -->
+                    <i class="fas fa-bars" onclick="showMenu()"></i>
+              	</div>
 
 			 <!--script-nav-->
 			<script>
@@ -91,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				   	       	<div class="banner_center">
 				   		 		<h2>Hello Guest👋</h2> 
 								<br>
-				   		 		<h1>i am <span><big>Maxwell Karanja.</big></span></h1>
+				   		 		<h1>i am <span><big>Maxwell Karanja</big></span></h1>
 				   		 		</div>
 				   		 </div>
 					</article>
@@ -276,8 +282,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"></div>
 	</div>
 	<div class="arrow1">
-	<a href="#work" class="scroll"><img src="images/arrow1.png" alt=""/></a>
-					</div>
+		<a href="#work" class="scroll"><i class="fas fa-arrow-alt-circle-down" aria-hidden="true" style="color: yellow; font-size: 22px;"></i></a>
+
+		  
+	</div>
 	</div>
 	</div>
 	<!-- about-section-ends -->
@@ -520,15 +528,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container"> 
 			<div class="contact-header">
 				<h3> contact</h3>
-					<p>Don't be shy! <br>If you have a project in mind <big>OR</big> would like: </p>
-						<ul>
-							<h5 style="color: #F0C514; display: inline-flex;">
-								Booking me  OR Get a quote for a project OR Just like to say hello
-							</h5>
-						</ul>
+					<p>Don't be shy! <br>If you have a project in mind <big>OR</big> would like: Booking me  OR Get a quote for a project OR Just like to say hello</p>
+					
 					<p>I am a very friendly person. Simply get in touch via my social media handles below <i class="fas fa-hand-point-down"></i> </p>	  
 						
 			</div>
+
+
 			<div class="social-tray">
 				<center>
 					<a href="https://www.facebook.com/dev.maxwell.k"><i class="fab fa-facebook" style="font-size: 50px; background-color: rgb(32, 80, 184); border-radius: 50%; color: #fff; margin: 12px;"></i></a>
@@ -536,6 +542,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="https://www.linkedin.com/in/dev-maxwell-karanja-715986252"><i class="fab fa-linkedin" style="font-size: 50px; background-color: rgb(32, 80, 184); border-radius: 50%; color: #fff; margin: 12px;"></i></a>
 					<a href="https://wa.link/uoxqvk"><i class="fab fa-whatsapp" style="font-size: 50px; background-color: rgb(26, 179, 12); border-radius: 50%; color: #fff; margin: 12px;"></i></a>
 				</center>
+			</div>
+			<br><br><br>
+
+			<div class="em-ph">
+				<p>Email <i class="fas fa-envelope"></i> or text Me via <i class="fas fa-sms"></i>:</p>
+				<br>
+				<div class="em-ph-det">
+						<a href="mailto:devmaxwellkaranja@gmail.com">
+							<button type="button" class="button">devmaxwellkaranja@gmail.com</button>
+						</a>
+						<a href="SMS:+254 715 063 221">
+							<button type="button" class="button">+254 715 063 221</button>
+						</a>
+				</div>	
 			</div>
 
 			<br><br><br><br><br><br>
@@ -585,7 +605,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		</div>		
 	</div>
-	
 	
 </body>
 </html>

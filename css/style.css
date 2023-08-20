@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5,h6{
 p{
 	padding:0 0;
 	margin:0 0;
-	font-size: 16px;
+	font-size: 17px;
 }
 ul{
 	padding:0 0;
@@ -1090,24 +1090,46 @@ padding-bottom: 2em;
 			}
 	
 
-/*----- resposnive-menu -----*/
+/*----- responsive-menu -----*/
+@media(min-width: 768px){
+	#menu i{
+		display: none;
+		cursor: pointer;
+	}
+	#sidebar{
+		display: none;
+	}
+}
+
+
 	@media(max-width:768px){
 		.header-top {
 		padding-top:2em;
 		}
-	span.menu:before 
-					{
-					content: url(../images/nav.png) no-repeat 0px 0px;
-					cursor: pointer;
-					}
-	.top-menu 
-	{
-		
+		span.menu:before{
+		content: url(../images/nav.png) no-repeat 0px 0px;
+		cursor: pointer;
+		}
+		#menu i{
+			font-size: 20px;
+			color: #eee;
+			position: fixed;
+			cursor: pointer;
+			right: 18px;
+			top: 5%;			
+		 }
+	.top-menu{		
+		float:none;
+		width: 100%;
+		text-align: right;
+		display: none;
+	}
+	.tmsb{
 		float:none;
 		width: 100%;
 		text-align: right;
 	}
-	.top-menu  ul
+	.top-menu .cl-effect-5 ul
 	{
 		display:none;
 	}
@@ -1115,7 +1137,6 @@ padding-bottom: 2em;
 	{
 		font-size: 14px;
 		display:block;
-		
 	}
 	.top-menu  span.menu
 	{
@@ -1148,6 +1169,8 @@ padding-bottom: 2em;
 		right: 46%;
 	}
 }
+
+
  @media(max-width:736px){
 	 .resp-tab-item {
 		padding: 0px 7px;
@@ -1544,8 +1567,8 @@ padding-bottom: 2em;
 			display: inline-block;
 			background-size: 420px;
 		}
-	
-			.footer-bottom p {
+
+		.footer-bottom p {
 			font-size: 13px;
 		}
 		.img-top {
@@ -1561,3 +1584,25 @@ padding-bottom: 2em;
 			margin:0 0;
 			font-size: 16px;
 		}		
+
+		.em-ph{
+			color: rgb(219, 148, 148);
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+		.button{
+			background-color: transparent;
+			background-image: none;
+			border: 1px solid yellow;
+			color: #14c4f0;
+			padding: 15px;
+			border-radius: 40px;
+			font-size: 17px;
+			text-align: center;
+			align-items: center;
+		}
+		
+
+
+
