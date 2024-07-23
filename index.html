@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksim Felix Book Reviews</title>
+    <style>
+        /* Add your custom CSS styles here */
+        /* For example, you can style the book list and review section */
+        /* to make it look cool and responsive across all devices */
+
+        body{
+            background-color: black;
+            color: grey;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .book {
+            width: 300px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .book h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .book p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .book .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maksim Felix Book Reviews</h1>
+
+    <div class="book-list">
+        <div class="book">
+            <img src="book1.jpg" alt="Book Title 1">
+            <h2>Book Title 1</h2>
+            <p>One sentence review for Book Title 1.</p>
+            <a href="book1.pdf" class="download-button">Download</a>
+        </div>
+        <div class="book">
+            <img src="book1.jpg" alt="Book Title 1">
+            <h2>Book Title 1</h2>
+            <p>One sentence review for Book Title 1.</p>
+            <a href="book1.pdf" class="download-button">Download</a>
+        </div>
+
+        <div class="book">
+            <img src="book2.jpg" alt="Book Title 2">
+            <h2>Book Title 2</h2>
+            <p>One sentence review for Book Title 2.</p>
+            <a href="book2.pdf" class="download-button">Download</a>
+        </div>
+
+    </div>
+</body>
+</html>
