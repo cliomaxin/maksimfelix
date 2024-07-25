@@ -57,12 +57,28 @@
             border-radius: 5px;
             margin: 30px;
         }
+        .review-btn{
+            color: yellow;
+        }
+        footer{
+            display: inline block;
+            text-align: center;
+            color: purple;
+            background-color: #fff;
+            padding: 2%;
+            margin-top: 3%;
+        }
+        spn-link{
+            text-decoration: none;
+            font-size: x-large;
+
+        }
     </style>
 </head>
 <body style="background-color: black;">
     <h1>Maksim Felix Book Reviews</h1>
 
-    <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; width: 300px; height: 300px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
+    <!-- <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; width: 300px; height: 300px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
         <h3>Congratulations!</h3>
         <p>You have successfully downloaded the book.</p>
     </div>
@@ -73,7 +89,7 @@
         downloadButton.addEventListener('click', () => {
             popup.style.display = 'block';
         });
-    </script>
+    </script> -->
 
     <div class="book-list">
         <div class="book">
@@ -81,14 +97,14 @@
             <h2>The Law Of Attraction</h2>
             <p>You can get anything in this world. You just have to create it in your mind and the universe will deliver it to you...</p>
             <a href="assets/lawofattraction.pdf" class="download-button">Download</a>
-            <a href="#">Full Review</a>
+            <a class="review-btn" href="https://www.facebook.com/100016706796553/posts/pfbid02ttTkHHWbfdhugDQzw2nqpZyTnD3tM8NAqb4fndS7ujC4EjUyQENMp3dij7cmpwpsl/?app=fbl">Full Review</a>
         </div>
         <div class="book">
             <img src="assets/giveandtake.jpg" alt="Book Title 1">
             <h2>Give and Take</h2>
             <p>This is why you should help other people in the quest to become successful. You win at the same time</p>
             <a href="assets/giveandtake.pdf" class="download-button">Download</a>
-            <a href="facebook.com">Full Review</a>
+            <a class="review-btn" href="https://www.facebook.com/100016706796553/posts/pfbid02vs2LH7sHN8Qg4TB36oSBexS7XJd8Z88z7QVsy7PLY5YhJcyoxn7sbz6VsH3Xefsdl/?app=fbl">Full Review</a>
         </div>
 
         <div class="book">
@@ -96,7 +112,7 @@
             <h2>The Leader Who Had No Title</h2>
             <p>You can lead in any capacity without having a title...</p>
             <a href="assets/THE LEADER WHO HAD NO TITLE(MaxiPy Productity platform).pdf" class="download-button">Download</a>
-            <a href="facebook.com">Full Review</a>
+            <a class="review-btn" href="https://www.facebook.com/100016706796553/posts/pfbid02rkUdd6vKTNuRd1iUSabPDHnJH82E9e3Y2N2qZ6oJ3HrywEtoiSpqBQz3NrAhgQRl/?app=fbl">Full Review</a>
         </div>
         
         <div class="book">
@@ -104,10 +120,14 @@
             <h2>Book Title 3</h2>
             <p>Sometime I am lazy to write all this. You  can activate this Lazybone. M-pesa number - 0728278258</p>
             <a href="book2.pdf" class="download-button">Download</a>
-            <a href="facebook.com">Full Review</a>
+            <a class="review-btn" href="facebook.com">Full Review</a>
         </div>
 
 
     </div>
+
+    <footer>
+        <p>&copy; 2024 Maksim Felix. All rights reserved. Sponsored by <a class="spn-link" href="facebook.com/maxipytech">MaxiPy</a>.</p>
+    </footer>
 </body>
 </html>
