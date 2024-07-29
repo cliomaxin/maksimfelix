@@ -9,6 +9,7 @@
             background-color: black;
             color: grey;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
         }
         body h1{
             font-size: 45px;
@@ -60,7 +61,7 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            margin: 30px;
+            margin-right: 20px;
         }
         .review-btn{
             color: yellow;
@@ -80,9 +81,144 @@
         }
         iframe{
             padding: 2%;
-            width: 50vw;
-            height: 70vh;
+            width: 70vw;
+            height: 90vh;
         }
+        
+
+.popup-link a{
+    background: #333;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size:17px;
+    cursor:pointer;
+    margin:20px;
+    text-decoration:none;
+}
+
+.popup-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 17, 17, 0.61);
+    display: flex;
+    align-items: center;
+}
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+.popup-content p{
+    font-size: 17px;
+    padding: 10px;
+    line-height: 20px;
+}
+.popup-content a.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-decoration:none;
+}
+
+.popup-content a.close:hover{
+  color:#333;
+}
+
+.popup-content span:hover,
+.popup-content span:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-container:target{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-container h3{
+  margin:10px;
+}
+/*End popup styles*/
+
+/* Additional styles */
+.popup-style-2{
+  transform: scale(0.3);
+  
+}
+
+.popup-style-2:target{
+  transform: scale(1);
+}
+
+.popup-style-3{
+  left:100%;
+  
+}
+
+.popup-style-3:target{
+  left:0;
+}
+
+.popup-style-4{
+  transform: rotate(180deg);
+}
+
+.popup-style-4:target{
+  transform: rotate(0deg);
+}
+
+.popup-style-5{
+  top:100%;
+  
+}
+
+.popup-style-5:target{
+  top:0;
+}
+
+.popup-style-6{
+  transform: scale(15.3);
+  
+}
+
+.popup-style-6:target{
+ transform: scale(1);
+ }
+
+.popup-style-7{
+  transform: skewY(180deg);
+   transition: all 0.7s ease-in-out;
+}
+
+.popup-style-7:target{
+ transform: skewY(0deg);
+ }
+ h4{
+    color: #ff3300;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 34px;
+ }
+ .popupp{
+    color: #007bff;
+ }
     </style>
 </head>
 <body style="background-color: black;">
@@ -102,19 +238,63 @@
         });
     </script> -->
 
+        <!--popup1-->
+        <div id="popup1" class="popup-container">
+          <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h4>You Are Awesome!</h4>
+            <a href="assets/lawofattraction.pdf" target="_blank" class="download-button">Download Book</a>
+            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: 0728278258 (Max)</p>
+          </div>
+        </div>
+        <div id="popup2" class="popup-container">
+          <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h4>You Are Awesome!</h4>
+            <a href="assets/giveandtake.pdf" target="_blank" class="download-button">Download Book</a>
+            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728278258</strong>(Max)</p>
+          </div>
+        </div>
+        <div id="popup3" class="popup-container">
+          <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h4>You Are Awesome!</h4>
+            <a href="assets/THE LEADER WHO HAD NO TITLE(MaxiPy Productity platform).pdf" target="_blank" class="download-button">Download Book</a>
+            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728278258</strong>(Max)</p>
+          </div>
+        </div>
+        <div id="popup4" class="popup-container">
+          <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h4>You Are Awesome!</h4>
+            <a href="assets/Law of Attraction_ Law of Attraction Secrets on How to Attract Money, Power and Love by Simon Gray.pdf" target="_blank" class="download-button">Download Book</a>
+            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728278258</strong>(Max)</p>
+          </div>
+        </div>
+        <div id="popup5" class="popup-container">
+          <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h4>You Are Awesome!</h4>
+            <a href="assets/124 by Thomas Kruse (z-lib.org).pdf" target="_blank" class="download-button">Download Book</a>
+            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728278258</strong>(Max)</p>
+          </div>
+        </div>
+
+
     <div class="book-list">
         <div class="book">
             <img src="assets/manifesting.jpg" alt="Book Title 1">
             <h2>The Law Of Attraction</h2>
             <p>You can get anything in this world. You just have to create it in your mind and the universe will deliver it to you...</p>
-            <a href="assets/lawofattraction.pdf" class="download-button">Download</a>
+             <div class="popup-link"><a href="#popup1" class="download-button">Get the Book</a></div>
             <a class="review-btn" href="https://www.facebook.com/100016706796553/posts/pfbid02ttTkHHWbfdhugDQzw2nqpZyTnD3tM8NAqb4fndS7ujC4EjUyQENMp3dij7cmpwpsl/?app=fbl">Full Review</a>
         </div>
+
         <div class="book">
             <img src="assets/giveandtake.jpg" alt="Book Title 1">
             <h2>Give and Take</h2>
             <p>This is why you should help other people in the quest to become successful. You win at the same time</p>
-            <a href="assets/giveandtake.pdf" class="download-button">Download</a>
+            <div class="popup-link"><a href="#popup2" class="download-button">Get the Book</a></div>
             <a class="review-btn" href="https://www.facebook.com/100016706796553/posts/pfbid02vs2LH7sHN8Qg4TB36oSBexS7XJd8Z88z7QVsy7PLY5YhJcyoxn7sbz6VsH3Xefsdl/?app=fbl">Full Review</a>
         </div>
 
@@ -122,7 +302,7 @@
             <img src="assets/leaderwithnotitle.jpg" alt="Book Title 3">
             <h2>The Leader Who Had No Title</h2>
             <p>You can lead in any capacity without having a title...</p>
-            <a href="assets/THE LEADER WHO HAD NO TITLE(MaxiPy Productity platform).pdf" class="download-button">Download</a>
+            <div class="popup-link"><a href="#popup3" class="download-button">Get the Book</a></div>
             <a class="review-btn" href="https://www.facebook.com/100016706796553/posts/pfbid02rkUdd6vKTNuRd1iUSabPDHnJH82E9e3Y2N2qZ6oJ3HrywEtoiSpqBQz3NrAhgQRl/?app=fbl">Full Review</a>
         </div>
         
@@ -130,25 +310,17 @@
             <img src="assets/law of attraction by simon gray.jpg" alt="Book Title 3">
             <h2>The Law of Attraction 2</h2>
             <p>Hey there, stop allowing your life live on autopilot. Get what you want by this amazing tool that you have in you called law of attraction</p>
-            <a href="assets/Law of Attraction_ Law of Attraction Secrets on How to Attract Money, Power and Love by Simon Gray.pdf" class="download-button">Download</a>
+            <div class="popup-link"><a href="#popup4" class="download-button">Get the Book</a></div>
             <a class="review-btn" href="https://www.facebook.com/100016706796553/posts/pfbid01PgDjT5ndreTU9CuP93NDvMnfnkoLT141qfxdF43nmYbREfnS91xrdd2UyNrr9Bel/?app=fbl">Full Review</a>
         </div>
 
         <div class="book">
-            <img src="how to think big.jpg" alt="Book Title 3">
-            <h2>Book Title 3</h2>
-            <p>Sometime I am lazy to write all this. You  can activate this Lazybone. M-pesa number - 0728278258</p>
-            <a href="book2.pdf" class="download-button">Download</a>
-            <a class="review-btn" href="facebook.com">Full Review</a>
+            <img src="assets/awaken the giant within.PNG" alt="Book Title 3">
+            <h2>How to Think Big</h2>
+            <p>You have a Giant in You? Curious of how big it is? Hit that download button</p>
+            <div class="popup-link"><a href="#popup5" class="download-button">Get the Book</a></div>
+            <a class="review-btn" href="#">No review yet!</a>
         </div>
-
-        <!-- <div class="book">
-            <img src="book2.jpg" alt="Book Title 3">
-            <h2>Book Title 3</h2>
-            <p>Sometime I am lazy to write all this. You  can activate this Lazybone. M-pesa number - 0728278258</p>
-            <a href="book2.pdf" class="download-button">Download</a>
-            <a class="review-btn" href="facebook.com">Full Review</a>
-        </div> -->
 
     </div>
 
