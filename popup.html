@@ -1,8 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="pop.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text Example</title>
+    <style>
+        .copy-button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea{
+            display: none;
+        }
+    </style>
 </head>
-<body> 
-  
+<body>
+    <div>
+        <textarea id="textToCopy" rows="4" cols="50">This is the text to be copied.</textarea>
+    </div>
+    <button class="copy-button" onclick="copyText()">Copy Text</button>
 
+    <script>
+        function copyText() {
+            // Get the text field
+            var copyText = document.getElementById("textToCopy");
 
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value).then(() => {
+                alert("Text copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
 </body>
+</html>

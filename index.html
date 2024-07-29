@@ -19,6 +19,13 @@
             color: #fff;
             margin-bottom: 70px;
         }
+        .header-main{
+            margin-bottom: 50px;
+            display: inline-flex;
+        }
+        sub{
+            margin-bottom: -50px;
+        }
         h3{
             text-align: center;
             color:#00ff22;
@@ -117,7 +124,7 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%;
+    width: 70%;
 }
 .popup-content p{
     font-size: 17px;
@@ -214,7 +221,9 @@
     color: #ff3300;
     text-transform: capitalize;
     text-align: center;
-    font-size: 34px;
+    font-size: 44px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
  .popupp{
     color: #007bff;
@@ -222,11 +231,27 @@
  strong{
     font-size: 20px;
  }
+ .copy-button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea{
+            display: none;
+        }
     </style>
 </head>
 <body style="background-color: black;">
     <header>
-        <h1>Maksim Felix Book Reviews</h1>
+        <div class="header-main">
+            <h1> Power Center</h1>
+            <sub>by Maksim Felix </sub>
+        </div>
+        
     </header>
     <!-- <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; width: 300px; height: 300px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
         <h3>Congratulations!</h3>
@@ -247,7 +272,29 @@
             <a href="#" class="close">&times;</a>
             <h4>You Are Awesome!</h4>
             <a href="assets/lawofattraction.pdf" target="_blank" class="download-button">Download Book</a>
-            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: 0728 2782 58 (Max)</p>
+            <p class="popupp">Appreciate  us with 20Ksh. M-pesa number: 0728 2782 58 (Max)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy mpesa no</button>
+        
+            <script>
+                function copyText() {
+                    // Get the text field
+                    var copyText = document.getElementById("textToCopy");
+        
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+                    // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value).then(() => {
+                        alert("Text copied to clipboard!");
+                    }).catch(err => {
+                        console.error("Failed to copy mpesa no: ", err);
+                    });
+                }
+            </script>
           </div>
         </div>
         <div id="popup2" class="popup-container">
@@ -255,7 +302,29 @@
             <a href="#" class="close">&times;</a>
             <h4>You Are Awesome!</h4>
             <a href="assets/giveandtake.pdf" target="_blank" class="download-button">Download Book</a>
-            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <p class="popupp">Appreciate  us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy mpesa no</button>
+        
+            <script>
+                function copyText() {
+                    // Get the text field
+                    var copyText = document.getElementById("textToCopy");
+        
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+                    // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value).then(() => {
+                        alert("Text copied to clipboard!");
+                    }).catch(err => {
+                        console.error("Failed to copy mpesa no: ", err);
+                    });
+                }
+            </script>
           </div>
         </div>
         <div id="popup3" class="popup-container">
@@ -263,7 +332,29 @@
             <a href="#" class="close">&times;</a>
             <h4>You Are Awesome!</h4>
             <a href="assets/THE LEADER WHO HAD NO TITLE(MaxiPy Productity platform).pdf" target="_blank" class="download-button">Download Book</a>
-            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <p class="popupp">Appreciate  us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy mpesa no</button>
+        
+            <script>
+                function copyText() {
+                    // Get the text field
+                    var copyText = document.getElementById("textToCopy");
+        
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+                    // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value).then(() => {
+                        alert("Text copied to clipboard!");
+                    }).catch(err => {
+                        console.error("Failed to copy mpesa no: ", err);
+                    });
+                }
+            </script>
           </div>
         </div>
         <div id="popup4" class="popup-container">
@@ -271,7 +362,29 @@
             <a href="#" class="close">&times;</a>
             <h4>You Are Awesome!</h4>
             <a href="assets/Law of Attraction_ Law of Attraction Secrets on How to Attract Money, Power and Love by Simon Gray.pdf" target="_blank" class="download-button">Download Book</a>
-            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <p class="popupp">Appreciate  us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy mpesa no</button>
+        
+            <script>
+                function copyText() {
+                    // Get the text field
+                    var copyText = document.getElementById("textToCopy");
+        
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+                    // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value).then(() => {
+                        alert("Text copied to clipboard!");
+                    }).catch(err => {
+                        console.error("Failed to copy mpesa no: ", err);
+                    });
+                }
+            </script>
           </div>
         </div>
         <div id="popup5" class="popup-container">
@@ -279,14 +392,36 @@
             <a href="#" class="close">&times;</a>
             <h4>You Are Awesome!</h4>
             <a href="assets/124 by Thomas Kruse (z-lib.org).pdf" target="_blank" class="download-button">Download Book</a>
-            <p class="popupp">You can appreciate us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <p class="popupp">Appreciate  us with 20Ksh. M-pesa number: <strong>0728 2782 58</strong> (Max)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy mpesa no</button>
+        
+            <script>
+                function copyText() {
+                    // Get the text field
+                    var copyText = document.getElementById("textToCopy");
+        
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+                    // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value).then(() => {
+                        alert("Text copied to clipboard!");
+                    }).catch(err => {
+                        console.error("Failed to copy mpesa no: ", err);
+                    });
+                }
+            </script>
           </div>
         </div>
 
 
     <div class="book-list">
         <div class="book">
-            <img src="assets/manifesting.jpg" alt="Book Title 1">
+            <img src="assets/manifesting.jpg" alt="The Law Of Attraction" loading="lazy">
             <h2>The Law Of Attraction</h2>
             <p>You can get anything in this world. You just have to create it in your mind and the universe will deliver it to you...</p>
              <div class="popup-link"><a href="#popup1" class="download-button">Get the Book</a></div>
@@ -294,7 +429,7 @@
         </div>
 
         <div class="book">
-            <img src="assets/giveandtake.jpg" alt="Book Title 1">
+            <img src="assets/giveandtake.jpg" alt="Give and Take book cover" loading="lazy">
             <h2>Give and Take</h2>
             <p>This is why you should help other people in the quest to become successful. You win at the same time</p>
             <div class="popup-link"><a href="#popup2" class="download-button">Get the Book</a></div>
@@ -302,7 +437,7 @@
         </div>
 
         <div class="book">
-            <img src="assets/leaderwithnotitle.jpg" alt="Book Title 3">
+            <img src="assets/leaderwithnotitle.jpg" alt="the leader with no title" loading="lazy">
             <h2>The Leader Who Had No Title</h2>
             <p>You can lead in any capacity without having a title...</p>
             <div class="popup-link"><a href="#popup3" class="download-button">Get the Book</a></div>
@@ -310,7 +445,7 @@
         </div>
         
         <div class="book">
-            <img src="assets/law of attraction by simon gray.jpg" alt="Book Title 3">
+            <img src="assets/law of attraction by simon gray.jpg" alt="law of attraction by simon gray" loading="lazy">
             <h2>The Law of Attraction 2</h2>
             <p>Hey there, stop allowing your life live on autopilot. Get what you want by this amazing tool that you have in you called law of attraction</p>
             <div class="popup-link"><a href="#popup4" class="download-button">Get the Book</a></div>
@@ -318,7 +453,7 @@
         </div>
 
         <div class="book">
-            <img src="assets/awaken the giant within.PNG" alt="Book Title 3">
+            <img src="assets/awaken the giant within.PNG" alt="awaken the giant within" loading="lazy">
             <h2>Awaken The Giant Within</h2>
             <p>You have a Giant in You? Curious of how big it is? Hit that download button</p>
             <div class="popup-link"><a href="#popup5" class="download-button">Get the Book</a></div>
