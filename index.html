@@ -252,6 +252,19 @@
             border: none;
             border-radius: 5px;
             font-size: 16px;
+            margin: 4px;
+        }
+        /* textarea{
+            display: none;
+        } */
+ .copy-button2 {
+            cursor: pointer;
+            background-color:#007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
         }
         textarea{
             display: none;
@@ -268,18 +281,6 @@
         </div>
         
     </header>
-    <!-- <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; width: 300px; height: 300px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
-        <h3>Congratulations!</h3>
-        <p>You have successfully downloaded the book.</p>
-    </div>
-    <script>
-        const downloadButton = document.querySelector('.download-button');
-        const popup = document.getElementById('popup');
-
-        downloadButton.addEventListener('click', () => {
-            popup.style.display = 'block';
-        });
-    </script> -->
 
         <!--popup1-->
         <div id="popup1" class="popup-container">
@@ -287,29 +288,14 @@
             <a href="#" class="close">&times;</a>
             <h4>You Are Awesome!</h4>
             <a href="assets/lawofattraction.pdf" target="_blank" class="pop-download-button">Download Book</a>
-            <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: 0728 278 258 (Max)</p>
+            <p class="popupp">Appreciate our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong>  (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="6" cols="60">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
-        
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
           </div>
         </div>
         <div id="popup2" class="popup-container">
@@ -318,28 +304,14 @@
             <h4>You Are Awesome!</h4>
             <a href="assets/giveandtake.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
         
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
           </div>
         </div>
         <div id="popup3" class="popup-container">
@@ -348,28 +320,14 @@
             <h4>You Are Awesome!</h4>
             <a href="assets/THE LEADER WHO HAD NO TITLE(MaxiPy Productity platform).pdf" target="_blank" class="pop-download-button">Download Book</a>
             <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
-        
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
+
           </div>
         </div>
         <div id="popup4" class="popup-container">
@@ -378,28 +336,14 @@
             <h4>You Are Awesome!</h4>
             <a href="assets/Law of Attraction_ Law of Attraction Secrets on How to Attract Money, Power and Love by Simon Gray.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
-        
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
+    
           </div>
         </div>
         <div id="popup5" class="popup-container">
@@ -408,28 +352,14 @@
             <h4>You Are Awesome!</h4>
             <a href="assets/124 by Thomas Kruse (z-lib.org).pdf" target="_blank" class="pop-download-button">Download Book</a>
             <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
         
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
           </div>
         </div>
         <div id="popup6" class="popup-container">
@@ -438,28 +368,14 @@
             <h4>You Are Awesome!</h4>
             <a href="assets/TED Talks Storytelling_ 23 Storytelling Techniques from the Best TED Talks ( PDFDrive ).pdf" target="_blank" class="pop-download-button">Download Book</a>
             <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
         
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
           </div>
         </div>
         
@@ -469,28 +385,14 @@
             <h4>You Are Awesome!</h4>
             <a href="assets/TED Talks Storytelling_ 23 Storytelling Techniques from the Best TED Talks ( PDFDrive ).pdf" target="_blank" class="pop-download-button">Download Book</a>
             <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
         
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
           </div>
         </div>
         
@@ -500,30 +402,44 @@
             <h4>You Are Awesome!</h4>
             <a href="assets/How to speak so people really listen the straight-talking guide to communicating with influence and impact by McGee, Paul.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy email address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
             </div>
             <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
-        
-            <script>
-                function copyText() {
-                    // Get the text field
-                    var copyText = document.getElementById("textToCopy");
-        
-                    // Select the text field
-                    copyText.select();
-                    copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-                    // Copy the text inside the text field
-                    navigator.clipboard.writeText(copyText.value).then(() => {
-                        alert("M-pesa number copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy M-pesa number: ", err);
-                    });
-                }
-            </script>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
           </div>
         </div>
+
+        <script>
+            function copyText() {
+                // Get the text field
+                var copyText = document.getElementById("textToCopy");
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value).then(() => {
+                    alert("M-pesa number copied to clipboard!");
+                }).catch(err => {
+                    console.error("Failed to copy M-pesa number: ", err);
+                });
+            }
+            function copyPaypal() {
+                // Get the paypal email field
+                var copyPaypal = document.getElementById("paypalToCopy");
+                // Select the paypal address field
+                copyPaypal.select();
+                copyPaypal.setSelectionRange(0, 99999); // For mobile devices
+                // Copy the paypal inside the text field
+                navigator.clipboard.writeText(copyPaypal.value).then(() => {
+                    alert("Paypal address copied to clipboard!");
+                }).catch(err => {
+                    console.error("Failed to copy Paypal address: ", err);
+                });
+            }
+        </script>
 
 
     <div class="book-list">
