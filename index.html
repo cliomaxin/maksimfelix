@@ -462,6 +462,68 @@
             </script>
           </div>
         </div>
+        
+        <div id="popup6" class="popup-container">
+          <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h4>You Are Awesome!</h4>
+            <a href="assets/TED Talks Storytelling_ 23 Storytelling Techniques from the Best TED Talks ( PDFDrive ).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+        
+            <script>
+                function copyText() {
+                    // Get the text field
+                    var copyText = document.getElementById("textToCopy");
+        
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+                    // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value).then(() => {
+                        alert("M-pesa number copied to clipboard!");
+                    }).catch(err => {
+                        console.error("Failed to copy M-pesa number: ", err);
+                    });
+                }
+            </script>
+          </div>
+        </div>
+        
+        <div id="popup7" class="popup-container">
+          <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h4>You Are Awesome!</h4>
+            <a href="assets/How to speak so people really listen the straight-talking guide to communicating with influence and impact by McGee, Paul.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <p class="popupp">Appreciate  our efforts with 20Ksh  - M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+        
+            <script>
+                function copyText() {
+                    // Get the text field
+                    var copyText = document.getElementById("textToCopy");
+        
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+                    // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value).then(() => {
+                        alert("M-pesa number copied to clipboard!");
+                    }).catch(err => {
+                        console.error("Failed to copy M-pesa number: ", err);
+                    });
+                }
+            </script>
+          </div>
+        </div>
 
 
     <div class="book-list">
@@ -523,9 +585,20 @@
             <a class="review-btn" href="#">No review yet!</a>
         </div>
 
+        <div class="book">
+            <img src="assets/how to influence people.PNG" alt="awaken the giant within" loading="lazy">
+            <h2>How To Speak So People Really Listen</h2>
+            <p>This book is disturbingly good. It simplifies the complex challenge of the Spoken Word into an entertainingly compelling sequence of easyto-use golden nuggets. 
+                <br><br>       
+                McGee is yet again doing his very best to put me out of business - Graham Davies</p>
+            <div class="popup-link"><a href="#popup7" class="download-button">Grab your Copy</a></div>
+            <a class="review-btn" href="#">No review yet!</a>
+        </div>
+
     </div>
 
     <hr style="border: none; height: 2px; background-color: #fff; margin: 20px 0; margin-top: 8%;">
+    <bold>#Extras</bold>
     <h3>This Video Will Transform How You Look at Money and Prosperity</h3>
     <div class="video-section" style="background-color: rgb(109, 109, 8); display: flex; justify-content: center;">
         <iframe src="assets/JulianRoz tiktok.mp4" frameborder="10" allowfullscreen></iframe>
