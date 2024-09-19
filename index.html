@@ -42,6 +42,8 @@
             color:#00ff22;
             font-size: x-large;
         }
+
+        @media (min-width: 400px) {
         .book-list {
             display: flex;
             flex-wrap: wrap;
@@ -60,7 +62,31 @@
             width: 100%;
             height: auto;
             margin-bottom: 10px;
+        }}
+
+         /* Mobile phone view... */
+        @media (max-width: 500px) {
+        .book {
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .book-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }}
+        /* Mobile phone view... */
 
         .book h2 {
             font-size: 20px;
@@ -286,6 +312,7 @@
             height: 50px;  
             margin-top: -33%;  
         }
+
     </style>
 </head>
 <body style="background-color: #272829;">
@@ -660,5 +687,6 @@
         <p style=""><a class="spn-link" href="portfolio2.html">Maksim Felix Portfolio</a></p> <br>
         <p>&copy; 2024 Maksim Felix. All rights reserved. Sponsored by <a class="spn-link" href="https://www.facebook.com/maxipytech">MaxiPy</a>.</p>
     </footer>
+    
 </body>
 </html>
