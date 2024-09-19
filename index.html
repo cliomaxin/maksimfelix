@@ -22,27 +22,28 @@
             font-family:Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
         }
+        .header-main{
+            margin-bottom: 50px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+        }
         body h1{
             font-size: 45px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
-            margin-bottom: 70px;
-        }
-        .header-main{
-            margin-bottom: 50px;
-            display: inline-flex;
-        }
-        sub{
-            margin-bottom: -50px;
+            margin-bottom: 20px;
         }
         h3{
             text-align: center;
-            color:#00ff22;
+            color:#ff5e00;
             font-size: x-large;
         }
-
+        
+        /* Extra large screen view... */
         @media (min-width: 400px) {
         .book-list {
             display: flex;
@@ -63,6 +64,7 @@
             height: auto;
             margin-bottom: 10px;
         }}
+         /* Extra large screen view end... */
 
          /* Mobile phone view... */
         @media (max-width: 500px) {
@@ -313,6 +315,52 @@
             margin-top: -33%;  
         }
 
+        /* ... Notice button and popup... */
+        .notice{
+            color: rgb(56, 165, 42);
+            font-size: larger;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .close-notice-btn{
+            padding: 13px;
+            background-color: #007bf1;
+            border: 0;
+            font-size: 16px;
+            margin-top: 2%;
+            border-radius: 2px;
+            color: #fefefe;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body style="background-color: #272829;">
@@ -322,7 +370,8 @@
         <div class="header-main" style="display: inline-flex; flex-wrap: wrap;"></div>
             <a href="portfolio2.html"><img src="assets/logo.png" class="logoimg" alt="Maksim Felix"></a>
             <h1> Power Center</h1>
-            <!-- <sub>by Maksim Felix </sub> -->
+            <center><sub>Your Life will transform forever after scrolling down</sub></center>
+            <hr>
         </div>
     </header>
 
@@ -679,9 +728,36 @@
               </iframe>
     </div>
     <hr style="border: none; height: 2px; background-color: #fff; margin: 20px 0;">
-
-
    </main>
+
+   <div class="notice">
+    <button class="button" onclick="showPopup()">Click here for Notice</button>
+
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+    <div class="popup" id="popup">
+        <h3>Polite Notice</h3>
+        <p>We strive to make this website as smooth as possible. Report any error OR suggest improvements
+            in any of my social media accounts: <a href="https://facebook.com/kenobimaksim" target="_blank">Facebook</a>, <a href="https://x.com/kenobimaksim" target="_blank">Twitter</a>, <a href="https://wa.link/k9h28j" target="_blank">Whatsapp</a>
+        </p>
+        <button class="close-notice-btn" onclick="hidePopup()">Nah, maybe later</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Show popup after 1 minute (60000 milliseconds)
+        setTimeout(showPopup, 60000);
+    </script>
+</div>
+
     <footer>
 
         <p style=""><a class="spn-link" href="portfolio2.html">Maksim Felix Portfolio</a></p> <br>
