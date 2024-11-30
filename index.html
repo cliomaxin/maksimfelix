@@ -396,6 +396,17 @@
             color: #fefefe;
             cursor: pointer;
         }
+        @keyframes twinkling {
+                0% { opacity: 1; }
+                50% { opacity: 0.5; }
+                100% { opacity: 1; }
+            }
+
+            .twinkling-text {
+                animation: twinkling 2s infinite;
+                font-weight: bold;
+                color: #fffb00;
+            }
 
     </style>
 </head>
@@ -406,7 +417,8 @@
         <div class="header-main" style="display: inline-flex; flex-wrap: wrap;"></div>
             <a href="portfolio2.html" id="logoimg"><img src="assets/logo.webp" class="logoimg" alt="Maksim Felix"></a>
             <h1> Power Center</h1>
-            <center><sub>Your Life will transform forever after scrolling down</sub></center>
+            <!-- <center><sub>Your Life will transform forever after scrolling down</sub></center> -->
+            <sub class="twinkling-text">Your Life will transform forever after scrolling down...</sub>
             <hr>
         </div>
     </header>
