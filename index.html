@@ -334,6 +334,19 @@
         .logoimg{
             height: 50px;  
             margin-top: -33%;  
+        }
+        @keyframes rotate {
+                    from {
+                        transform: rotateY(0deg);
+                    }
+                    to {
+                        transform: rotateY(360deg);
+                    }
+                }
+                .logoimg {
+                    animation: rotate 5s linear infinite;
+                }
+        #logoimg{
             border: 3px solid #ff3300;
             border-radius: 50%;
         }
@@ -391,7 +404,7 @@
     <main>
     <header>
         <div class="header-main" style="display: inline-flex; flex-wrap: wrap;"></div>
-            <a href="portfolio2.html"><img src="assets/logo.webp" class="logoimg" alt="Maksim Felix"></a>
+            <a href="portfolio2.html" id="logoimg"><img src="assets/logo.webp" class="logoimg" alt="Maksim Felix"></a>
             <h1> Power Center</h1>
             <center><sub>Your Life will transform forever after scrolling down</sub></center>
             <hr>
