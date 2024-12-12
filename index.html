@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maksim Felix Power Center</title>
+    <meta name="description" content="Discover the importance of equipping yourself with knowledge for self-development. Explore a curated selection of self-help books designed to enhance personal growth, boost confidence, and achieve success. Start your journey towards a better you with our expert recommendations, resources, and top-rated personal development books. Transform your life with actionable insights, practical advice, and proven strategies for self-improvement. Find the best self-help books for confidence building, success, and overall personal growth. Unlock your potential and achieve your goals today.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' width='200' height='100'><text x='40' y='70' font-family='Arial' font-size='80' font-weight='bold' fill='white'>M</text><text x='100' y='70' font-family='Arial' font-size='80' font-weight='bold' fill='rgba(255, 255, 0, 0.6)'>K</text></svg>">
+
     <!-- Google site verification tag -->
     <meta name="google-site-verification" content="C0nLVBLzDcJ8Kjz3XXmduK7AW_0H90_cmB1CxVTrTPc" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3NFFB5HD0"></script>
+
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -151,8 +155,8 @@
         footer{
             display: inline block;
             text-align: center;
-            color: purple;
-            background-color: #fff;
+            color: rgb(3, 3, 3);
+            background-color: rgb(202, 201, 201);
             padding: 2%;
             margin-top: 3%;
         }
@@ -335,6 +339,21 @@
             height: 50px;  
             margin-top: -33%;  
         }
+        @keyframes rotate {
+                    from {
+                        transform: rotateY(0deg);
+                    }
+                    to {
+                        transform: rotateY(360deg);
+                    }
+                }
+                .logoimg {
+                    animation: rotate 5s linear infinite;
+                }
+        #logoimg{
+            border: 3px solid #ff3300;
+            border-radius: 50%;
+        }
 
         /* ... Notice button and popup... */
         .notice{
@@ -355,7 +374,8 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background-color: brown;
+            background-color: rgb(230, 7, 7);
+            color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -381,6 +401,17 @@
             color: #fefefe;
             cursor: pointer;
         }
+        @keyframes twinkling {
+                0% { opacity: 1; }
+                50% { opacity: 0.5; }
+                100% { opacity: 1; }
+            }
+
+            .twinkling-text {
+                animation: twinkling 2s infinite;
+                font-weight: bold;
+                color: #fffb00;
+            }
 
     </style>
 </head>
@@ -389,9 +420,10 @@
     <main>
     <header>
         <div class="header-main" style="display: inline-flex; flex-wrap: wrap;"></div>
-            <a href="portfolio2.html"><img src="assets/logo.png" class="logoimg" alt="Maksim Felix"></a>
+            <a href="portfolio2.html" id="logoimg"><img src="assets/logo.webp" class="logoimg" alt="Maksim Felix"></a>
             <h1> Power Center</h1>
-            <center><sub>Your Life will transform forever after scrolling down</sub></center>
+            <!-- <center><sub>Your Life will transform forever after scrolling down</sub></center> -->
+            <sub class="twinkling-text">Your Life will transform forever after scrolling down...</sub>
             <hr>
         </div>
     </header>
@@ -400,10 +432,10 @@
         <div id="popup1" class="popup-container fullwidth">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/lawofattraction1 (MaxiPy productivity Hub).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/lawofattraction1%20(MaxiPy%20productivity%20Hub)-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong>  (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong>  (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -416,10 +448,10 @@
         <div id="popup2" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/giveandtake (MaxiPy Productivity Hub - youtube).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/giveandtake%20(MaxiPy%20Productivity%20Hub%20-%20youtube)-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -433,10 +465,10 @@
         <div id="popup3" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/THE LEADER WHO HAD NO TITLE(MaxiPy Productity platform).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/THE%20LEADER%20WHO%20HAD%20NO%20TITLE(MaxiPy%20Productity%20platform)-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -450,10 +482,10 @@
         <div id="popup4" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/Law of Attraction_ Law of Attraction Secrets on How to Attract Money, Power and Love by Simon Gray(MaxiPy productivity hub - Youtube).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Law%20of%20Attraction_%20Law%20of%20Attraction%20Secrets%20on%20How%20to%20Attract%20Money,%20Power%20and%20Love%20by%20Simon%20Gray(MaxiPy%20productivity%20hub%20-%20Youtube)-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -467,10 +499,10 @@
         <div id="popup5" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/124 by Thomas Kruse (MaxiPy productivity hub).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/124%20by%20Thomas%20Kruse%20(MaxiPy%20productivity%20hub).pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -485,10 +517,10 @@
         <div id="popup6" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/TED Talks Storytelling_ 23 Storytelling Techniques from the Best TED Talks (MaxiPy Productivity Hub).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/TED%20Talks%20Storytelling_%2023%20Storytelling%20Techniques%20from%20the%20Best%20TED%20Talks%20(MaxiPy%20Productivity%20Hub)-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -503,10 +535,10 @@
         <div id="popup7" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/How to speak so people really listen the straight-talking guide to communicating with influence and impact by McGee, Paul (MaxiPy Productivity Hub - Youtube).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/How%20to%20speak%20so%20people%20really%20listen%20the%20straight-talking%20guide%20to%20communicating%20with%20influence%20and%20impact%20by%20McGee,%20Paul%20(MaxiPy%20Productivity%20Hub%20-%20Youtube)-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -520,10 +552,10 @@
         <div id="popup8" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/THE MAGIC OF THINKING BIG (MaxiPy Productivity Hub).pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/THE%20MAGIC%20OF%20THINKING%20BIG%20(MaxiPy%20Productivity%20Hub)-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -537,10 +569,10 @@
         <div id="popup9" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/Gifted_Hands - Ben_Carson - MaxiPy Productivity hub -youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Gifted_Hands%20-%20Ben_Carson%20-%20MaxiPy%20Productivity%20hub%20-youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -554,10 +586,10 @@
         <div id="popup10" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/Think_Big-_Carson_Ben - MaxiPy Productivity hub -youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Think_Big-_Carson_Ben%20-%20MaxiPy%20Productivity%20hub%20-youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -571,10 +603,10 @@
         <div id="popup11" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/The_Game_of_Life_and_How_to_Play_It_-_Florence_Scovel_Shinn - MaxiPy -youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/The_Game_of_Life_and_How_to_Play_It_-_Florence_Scovel_Shinn%20-%20MaxiPy%20-youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate  our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -588,10 +620,10 @@
         <div id="popup12" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/Your_Word_Is_Your_Wand_-_Florence_Scovel_Shinn - Maxipy productivity hub - youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Your_Word_Is_Your_Wand_-_Florence_Scovel_Shinn%20-%20Maxipy%20productivity%20hub%20-%20youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -605,10 +637,10 @@
         <div id="popup13" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/DonaldTrump-the-art-of-the-deal_MaxiPy Productivity Hub - Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/DonaldTrump-the-art-of-the-deal_MaxiPy%20Productivity%20Hub%20-%20Youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -622,10 +654,10 @@
         <div id="popup14" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets\Shoe-Dog - MaxiPy Productivity Hub - Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Shoe-Dog%20-%20MaxiPy%20Productivity%20Hub%20-%20Youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -639,10 +671,10 @@
         <div id="popup15" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/Becoming SuperNatural - Maxipy Productivity - Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Becoming%20SuperNatural%20-%20Maxipy%20Productivity%20-%20Youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -656,10 +688,10 @@
         <div id="popup16" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets/Stillness_Is_the_Key_Ryan_Holiday - MaxiPy Productivity Hub - Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Stillness_Is_the_Key_Ryan_Holiday%20-%20MaxiPy%20Productivity%20Hub%20-%20Youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -673,10 +705,10 @@
         <div id="popup17" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets\The-Alchemist-Paulo-Coelho - Maxipy Productivity Hub - Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/The-Alchemist-Paulo-Coelho%20-%20Maxipy%20Productivity%20Hub%20-%20Youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -690,10 +722,61 @@
         <div id="popup18" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
-            <h4>You Are Awesome!</h4>
-            <a href="assets\The_four_agreements_-_Don_Micheal_Ruiz - Maxipy Productivity Hub - Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/The_four_agreements_-_Don_Micheal_Ruiz%20-%20Maxipy%20Productivity%20Hub%20-%20Youtube-min.pdf" target="_blank" class="pop-download-button">Download Book</a>
             <br><br><hr>
-            <p class="popupp">Appreciate our efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
+          </div>
+        </div>
+
+        <div id="popup19" class="popup-container">
+          <div class="popup-content">
+            <a href="#extras" class="close">&times;</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/Surrounded%20by%20Idiots%20-%20Thomas%20Erikson%20-%20Maxipy%20Productivity%20Hub_%20Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <br><br><hr>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
+          </div>
+        </div>
+
+        <div id="popup20" class="popup-container">
+          <div class="popup-content">
+            <a href="#extras" class="close">&times;</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/The_psychology_of_money_-_Morgan_housel%20-%20Maxipy%20Productivity%20Hub%20-%20Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <br><br><hr>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
+            <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
+            <div>
+                <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
+                <textarea id="paypalToCopy" rows="4" cols="50">mxkaranja@gmail.com</textarea>
+            </div>
+            <button class="copy-button" onclick="copyText()">copy M-pesa number</button>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal Acc address</button>
+          </div>
+        </div>
+
+        <div id="popup21" class="popup-container">
+          <div class="popup-content">
+            <a href="#extras" class="close">&times;</a>
+            <h4>You Are Fantastic!</h4>
+            <a href="https://cliomaxin.github.io/powercentre/assets/The_10_New_Life-Changing_Skills_Get_Them_and_Get_Ahead_-_Rajesh_Srivastava%20-%20Maxipy%20Productivity%20Hub%20-%20Youtube.pdf" target="_blank" class="pop-download-button">Download Book</a>
+            <br><br><hr>
+            <p class="popupp">Appreciate the efforts with 22Ksh. M-pesa number: <strong>0728 278 258</strong> (Max)</p>
             <p class="popupp">OR PayPal <strong>mxkaranja@gmail.com</strong>  (copy PayPal address below)</p>
             <div>
                 <textarea id="textToCopy" rows="4" cols="50">0728278258</textarea>
@@ -736,7 +819,7 @@
 
     <div class="book-list">
         <div class="book">
-            <img src="assets/manifesting.jpg" alt="The Law Of Attraction book cover by Jenny Loveless" loading="lazy">
+            <img src="assets/manifesting.webp" alt="The Law Of Attraction book cover by Jenny Loveless" loading="lazy">
             <h2>The Law Of Attraction</h2>
             <p>The Law of Attraction is also a proven Universal law that we
                 cannot defy. It states that we create things, events, circumstances and
@@ -748,7 +831,7 @@
         </div>
 
         <div class="book">
-            <img src="assets/giveandtake.jpg" alt="Give and Take book cover" loading="lazy">
+            <img src="assets/giveandtake.webp" alt="Give and Take book cover" loading="lazy">
             <h2>Give and Take</h2>
             <p>Givers are at a disadvantage: they make others better off but sacrifice their own success in the process...</p>
             <div class="popup-link"><a href="#popup2" class="download-button">Grab your Copy</a></div>
@@ -756,7 +839,7 @@
         </div>
 
         <div class="book">
-            <img src="assets/leaderwithnotitle.jpg" alt="the leader with no title book cover" loading="lazy">
+            <img src="assets/leaderwithnotitle.webp" alt="the leader with no title book cover" loading="lazy">
             <h2>The Leader Who Had No Title</h2>
             <p>Your job title is ‘Human Being’!” I exclaimed. “Man, that’s completely hip. I love it....</p>
             <div class="popup-link"><a href="#popup3" class="download-button">Grab your Copy</a></div>
@@ -764,7 +847,7 @@
         </div>
         
         <div class="book">
-            <img src="assets/law of attraction by simon gray.jpg" alt="law of attraction by simon gray book cover" loading="lazy">
+            <img src="assets/law of attraction by simon gray.webp" alt="law of attraction by simon gray book cover" loading="lazy">
             <h2>The Law of Attraction 2</h2>
             <p>It does not judge what you think or imagine or do, it gives equal weight to whatever you put out in the world. </p>
             <div class="popup-link"><a href="#popup4" class="download-button">Grab your Copy</a></div>
@@ -772,17 +855,17 @@
         </div>
 
         <div class="book">
-            <img src="assets/awaken the giant within.PNG" alt="awaken the giant within book cover" loading="lazy">
+            <img src="assets/awaken the giant within.webp" alt="awaken the giant within book cover" loading="lazy">
             <h2>Awaken The Giant Within</h2>
             <p>My answer is simple: I learned to harness the principle I now call concentration of power. 
                 Most people have no idea of the giant capacity we can immediately command when we focus all of our 
                 resources on mastering a single area of our lives.</p>
             <div class="popup-link"><a href="#popup5" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="#">Sorry, too lazy! </a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/100016706796553/posts/pfbid02G7zct9ieEnKJs3418G5rhSyLZ1Ry1Goikdtc4kRrP4mYTiM9cMnCHLw7Tb9skeUjl/?app=fbl">Oops! No post review </a>
         </div>
 
         <div class="book">
-            <img src="assets/storytelling TEDTALKS(MaxiPy - Youtube).PNG" alt="awaken the giant within book cover" loading="lazy">
+            <img src="assets/storytelling TEDTALKS(MaxiPy - Youtube).webp" alt="awaken the giant within book cover" loading="lazy">
             <h2>Storytelling Techniques from the Best TED Talks</h2>
             <p>If you’ve ever experienced a great speech, you know that it’s about more than what the
                 speaker said. It’s also about the mental picture that the speaker painted for you. Engaging
@@ -792,7 +875,7 @@
         </div>
 
         <div class="book">
-            <img src="assets/how to influence people.PNG" alt="How To Speak So People Really Listen book cover" loading="lazy">
+            <img src="assets/how to influence people.webp" alt="How To Speak So People Really Listen book cover" loading="lazy">
             <h2>How To Speak So People Really Listen</h2>
             <p>This book is disturbingly good. It simplifies the complex challenge of the Spoken Word into an entertainingly compelling sequence of easyto-use golden nuggets. 
                 <br><br>       
@@ -802,17 +885,17 @@
         </div>
 
         <div class="book">
-            <img src="assets/how to think big.PNG" alt="The Magic of Thinking Big book cover" loading="lazy">
+            <img src="assets/how to think big.webp" alt="The Magic of Thinking Big book cover" loading="lazy">
             <h2>The Magic of Thinking Big</h2>
             <p>Belief,	strong	belief,	trigger the	mind	to
                 figure	ways	and	means	and	how-to.	And	believing	you	can	succeed	makes	others
                 place	confidence	in	you.</p>
             <div class="popup-link"><a href="#popup8" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/pTFmuxvSQq7UaVDC/">Sorry, too lazy! </a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/pTFmuxvSQq7UaVDC/">Oops! No post review </a>
         </div>
 
         <div class="book">
-            <img src="assets/Gifted-Hands-Ben-Carson maxipy productivity hub - youtube Download.jpg" alt="Gifted hands by Ben Carson book cover" loading="lazy">
+            <img src="assets/Gifted-Hands-Ben-Carson maxipy productivity hub - youtube Download.webp" alt="Gifted hands by Ben Carson book cover" loading="lazy">
             <h2>Gifted Hands</h2>
             <p>Your story just turned my life around and gave me
                 hope. Your example inspired me to go on and put my
@@ -820,22 +903,22 @@
                 things are starting to turn around. That article changed
                 my life.</p>
             <div class="popup-link"><a href="#popup9" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/pTFmuxvSQq7UaVDC/">Sorry, too lazy! </a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/pTFmuxvSQq7UaVDC/">Oops! No post review </a>
         </div>
 
         <div class="book">
-            <img src="assets/Think-Big-Ben-Carson-Maxipy Productivity hub - youtube.jpg" alt="Thinking Big by Ben Carson book cover" loading="lazy">
+            <img src="assets/Think-Big-Ben-Carson-Maxipy Productivity hub - youtube.webp" alt="Thinking Big by Ben Carson book cover" loading="lazy">
             <h2>Thinking Big</h2>
             <p>What if I try to be confident in what I’m doing and not make it so obvious that I
                 have to be the best? If I know all of this and use it, isn’t that what counts?
                 Who said that I have to push all this information on everybody?
                 </p>
             <div class="popup-link"><a href="#popup10" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/pTFmuxvSQq7UaVDC/">Sorry, too lazy! </a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/pTFmuxvSQq7UaVDC/">Oops! No post review </a>
         </div>
 
         <div class="book">
-            <img src="assets/The game of life - MaxiPy - youtube.jpg" alt="Game of life and how to play it book cover" loading="lazy">
+            <img src="assets/The game of life - MaxiPy - youtube.webp" alt="Game of life and how to play it book cover" loading="lazy">
             <h2>The Game Of Life And How To Play It</h2>
             <p>Whatever man feels deeply or images clearly, is impressed upon the
                 subconscious mind, and carried out in minutest detail.
@@ -847,7 +930,7 @@
         </div>
 
         <div class="book">
-            <img src="assets/[Florence_Scovel_Shinn]_Your_Word_is_Your_Wand - MaxiPy productivity Hub - youtube.jpg" alt="Your Word is Your Wand book cover" loading="lazy">
+            <img src="assets/[Florence_Scovel_Shinn]_Your_Word_is_Your_Wand - MaxiPy productivity Hub - youtube.webp" alt="Your Word is Your Wand book cover" loading="lazy">
             <h2>Your Word is Your Wand</h2>
             <p>
                 Shortly afterwards she was made a gift of six thousand 
@@ -860,18 +943,18 @@
         </div>
 
         <div class="book">
-            <img src="assets\Trump-The-Art-of-the-Deal --  MaxiPy Productivity - Youtube.jpg" alt="The art of the deal by Donald Trump book cover" loading="lazy">
+            <img src="assets\Trump-The-Art-of-the-Deal --  MaxiPy Productivity - Youtube.webp" alt="The art of the deal by Donald Trump book cover" loading="lazy">
             <h2>The Art of The Deal</h2>
             <p>
                 People think I’m a gambler. I’ve never gambled in my life. To me, a gambler is someone who
 plays slot machines. I prefer to own slot machines. It’s a very good business being the house
                 </p>
             <div class="popup-link"><a href="#popup13" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Sorry, too lazy!</a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
         </div>
 
         <div class="book">
-            <img src="assets\The Shoe Dog - MaxiPy productivity - Youtube.jpg" alt="The Shoe Dog book cover" loading="lazy">
+            <img src="assets\The Shoe Dog - MaxiPy productivity - Youtube.webp" alt="The Shoe Dog book cover" loading="lazy">
             <h2>The Shoe Dog</h2>
             <p>
                 They barraged me with questions about the United States, about
@@ -879,11 +962,11 @@ plays slot machines. I prefer to own slot machines. It’s a very good business 
                 shoes available in American sporting goods stores
                 </p>
             <div class="popup-link"><a href="#popup14" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Sorry, too lazy!</a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
         </div>
 
         <div class="book">
-            <img src="assets/Becoming Supernatural - MaxiPy Productivity- YouTube.PNG" alt="Becoming SuperNatural book cover" loading="lazy">
+            <img src="assets/Becoming Supernatural - MaxiPy Productivity- YouTube.webp" alt="Becoming SuperNatural book cover" loading="lazy">
             <h2>Becoming SuperNatural</h2>
             <p>
                 So if you were miserable in your old job but managed to get a new one, you
@@ -891,11 +974,11 @@ might be happy for a few weeks or even a few months. But if you had spent
 years conditioning your body to be addicted to misery...
                 </p>
             <div class="popup-link"><a href="#popup15" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Sorry, too lazy!</a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
         </div>
 
         <div class="book">
-            <img src="assets/Stillness Is the Key - MaxiPy Productivity - YouTube.PNG" alt="Stillness is the key book cover" loading="lazy">
+            <img src="assets/Stillness Is the Key - MaxiPy Productivity - YouTube.webp" alt="Stillness is the key book cover" loading="lazy">
             <h2>Stillness Is The Key</h2>
             <p>
                 In each domain, we will seek to reduce the disturbances and
@@ -910,7 +993,7 @@ instead.
 
 
         <div class="book">
-            <img src="assets/The-Alchemist-Paulo-Coelho - Maxipy Productivity Hub - Youtube.jpg" alt="The Alchemist Paulo Coelho book cover" loading="lazy">
+            <img src="assets/The-Alchemist-Paulo-Coelho - Maxipy Productivity Hub - Youtube.webp" alt="The Alchemist Paulo Coelho book cover" loading="lazy">
             <h2>The Alchemist</h2>
             <p>
                 Based on the omens of the present. The secret is here
@@ -920,11 +1003,11 @@ instead.
 
                 </p>
             <div class="popup-link"><a href="#popup17" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Sorry, too lazy!</a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
         </div>
 
         <div class="book">
-            <img src="assets\The Four Agreements - Maxipy Productivity Hub - Youtube.jpg" alt="The Four Agreements book cover" loading="lazy">
+            <img src="assets\The Four Agreements - Maxipy Productivity Hub - Youtube.webp" alt="The Four Agreements book cover" loading="lazy">
             <h2>The Four Agreements</h2>
             <p>
                 You can speak. What other animal on the
@@ -933,8 +1016,51 @@ instead.
 
                 </p>
             <div class="popup-link"><a href="#popup18" class="download-button">Grab your Copy</a></div>
-            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Sorry, too lazy!</a>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
         </div>
+
+        <div class="book">
+            <img src="assets\Surrounded by Idiots_Maxipy productivity hub - Youtube.webp" alt="Surrounded by Idiots book cover" loading="lazy">
+            <h2>Sorrounded By Idiots</h2>
+            <p>
+                In the best of worlds, everyone can be themselves and everything
+functions smoothly from the word go. Everyone agrees at all times
+and conflicts don’t exist at all...
+
+                </p>
+            <div class="popup-link"><a href="#popup19" class="download-button">Grab your Copy</a></div>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
+        </div>
+
+        <div class="book">
+            <img src="assets\The-Psychology-of-Money-Maxipy Productivity Hub - Youtube.webp" alt="Psychology-of-Money book cover" loading="lazy">
+            <h2>Psychology Of Money</h2>
+            <p>
+                Part of what’s happened here is that we’ve used our greater wealth to buy
+bigger and better stuff. But we’ve simultaneously given up more control
+over our time. At best, those things cancel each other out...
+
+                </p>
+            <div class="popup-link"><a href="#popup20" class="download-button">Grab your Copy</a></div>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
+        </div>
+
+        <div class="book">
+            <img src="assets\The_10_New_Life-Changing_Skills_Get_Them_and_Get_Ahead_-_Rajesh_Srivastava - Maxipy Productivity Hub - Youtube.webp" alt="The_10_New_Life-Changing_Skills book cover" loading="lazy">
+            <h2>The 10 New Life Changing Skills</h2>
+            <p>
+                The taxi driver knew it was raining but did not understand why it rains.
+The same is true for us also. We may ‘know’ these skills. But we may
+not understand them...
+
+                </p>
+            <div class="popup-link"><a href="#popup21" class="download-button">Grab your Copy</a></div>
+            <a class="review-btn" target="_blank" href="https://www.facebook.com/share/p/vWLLtNWrLnZ4rocV/">Oops! No post review</a>
+        </div>
+
+
+
+
 
     </div>
 
@@ -942,19 +1068,36 @@ instead.
     <bold id="extras">#Extras</bold>
     <h2>You will never be the same after watching this...</h2>
     <div class="video-section" style="background-color: #007bff; display: flex; justify-content: center;">
-        <iframe width="560" height="315" src=
-        "assets/JulianRoz tiktok.mp4"
-                    title="YouTube video player" 
+        <p style="color: #fff">(The video is temporarily unavailable on this site. However, you can click -- <a class="twinkling-text" href="https://www.youtube.com/embed/lqqrkskqJ5U">THIS LINK</a>  -- to watch it on YouTube. Apologies for the inconveniences)</p>
+        <!-- <iframe width="560" height="315" src="https://cliomaxin.github.io/powercentre/assets/JulianRoz%20tiktok.mp4"
+        preload="none" src="video.mp4" autoplay="false" poster="assets/videothumbnail.webp" muted="false" loop="false"
+                    title="Maksim Felix Portfolio Video" 
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; 
                            encrypted-media; gyroscope; 
                            picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" 
                     allowfullscreen>
-              </iframe>
+              </iframe> -->
     </div>
+
+    <!-- failed youtube video display... will reworkon it later -->
+<!-- <div class="video-section" style="background-color: #007bff; display: flex; justify-content: center;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lqqrkskqJ5U" 
+                title="Maksim Felix Portfolio Video" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; 
+                       encrypted-media; gyroscope; 
+                       picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+    </div> -->
+
     <hr style="border: none; height: 2px; background-color: #fff; margin: 20px 0;">
    </main>
+
+   <br><br>
 
    <div class="notice">
     <button class="button" onclick="showPopup()">Click here for Notice</button>
@@ -985,9 +1128,9 @@ instead.
 </div>
 
     <footer>
-
-        <p style=""><a class="spn-link" href="portfolio2.html">Maksim Felix Portfolio</a></p> <br>
-        <p>&copy; 2024 Maksim Felix. All rights reserved. Sponsored by <a class="spn-link" href="https://www.facebook.com/maxipytech">MaxiPy</a>.</p>
+        <center><p style="border: 1px solid #000; padding: 1%; width: 30vw; border-radius: 25px;"><a class="spn-link" href="portfolio2.html">About Maksim Felix</a></p></center>
+         <br>
+        <p> Brought to you by <a class="spn-link" href="https://www.facebook.com/maxipytech">MaxiPy</a> Productivity Hub. <br><br> &copy; 2025 - Maksim Felix - All rights reserved. </p>
     </footer>
     
 </body>
