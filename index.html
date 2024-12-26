@@ -796,7 +796,7 @@
                 copyText.setSelectionRange(0, 99999); // For mobile devices
                 // Copy the text inside the text field
                 navigator.clipboard.writeText(copyText.value).then(() => {
-                    alert("M-pesa number copied to clipboard!");
+                    alert("WooHoo! M-pesa number copied");
                 }).catch(err => {
                     console.error("Failed to copy M-pesa number: ", err);
                 });
@@ -809,7 +809,7 @@
                 copyPaypal.setSelectionRange(0, 99999); // For mobile devices
                 // Copy the paypal inside the text field
                 navigator.clipboard.writeText(copyPaypal.value).then(() => {
-                    alert("Paypal address copied to clipboard!");
+                    alert("WooHoo! PayPal address copied");
                 }).catch(err => {
                     console.error("Failed to copy PayPal address: ", err);
                 });
