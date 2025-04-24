@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patreon - PowerCentre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+
+        .payment-option img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .payment-option a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .payment-option a:hover {
+            text-decoration: underline;
+        }
+
+        .qr-code {
+            text-align: center;
+        }
+
+        .qr-code img {
+            max-width: 150px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .qr-code a {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .qr-code a:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .payment-option {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .payment-option img {
+                margin-bottom: 10px;
+            }
+        }
+        .copy-button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 4px;
+        }
+        .copy-button2 {
+            cursor: pointer;
+            background-color:#007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .copy-button3 {
+            cursor: pointer;
+            background-color: #5A50FE;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support Us on Patreon</h1>
+
+        <!-- Link-based payment options -->
+        <div class="payment-option">
+            <span>M-Pesa</span>
+            <button class="copy-button" onclick="copyMpesa()">copy M-pesa number</button>
+        </div>
+        <div class="payment-option">
+            <span>EverSend</span>
+            <button class="copy-button3" onclick="copyEversend()">copy Eversend tag</button>
+        </div>
+        <div class="payment-option">
+            <span>PayPal</span>
+            <button class="copy-button2" onclick="copyPaypal()">copy PayPal address</button>
+        </div>
+
+        <div style="display: none;">
+            <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
+            <textarea id="paypalToCopy" rows="6" cols="60">kenobimaksimfelix@gmail.com</textarea>
+            <textarea id="eversendToCopy" rows="6" cols="60">https://eversend.me/maksimfelix</textarea>
+        </div>
+
+        <script>
+            function copyMpesa() {
+                // Get the text field
+                var copyText = document.getElementById("mpesaToCopy");
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value).then(() => {
+                    alert("WooHoo! M-pesa number copied");
+                }).catch(err => {
+                    console.error("Failed to copy M-pesa: ", err);
+                });
+            }
+            function copyPaypal() {
+                // Get the paypal email field
+                var copyPaypal = document.getElementById("paypalToCopy");
+                // Select the paypal address field
+                copyPaypal.select();
+                copyPaypal.setSelectionRange(0, 99999); // For mobile devices
+                // Copy the paypal inside the text field
+                navigator.clipboard.writeText(copyPaypal.value).then(() => {
+                    alert("WooHoo! PayPal address copied");
+                }).catch(err => {
+                    console.error("Failed to copy PayPal address: ", err);
+                });
+            }
+            function copyEversend() {
+                // Get the paypal email field
+                var copyPaypal = document.getElementById("eversendToCopy");
+                // Select the paypal address field
+                copyPaypal.select();
+                copyPaypal.setSelectionRange(0, 99999); // For mobile devices
+                // Copy the paypal inside the text field
+                navigator.clipboard.writeText(copyPaypal.value).then(() => {
+                    alert("WooHoo! Eversend address copied");
+                }).catch(err => {
+                    console.error("Failed to copy Eversend address: ", err);
+                });
+            }
+        </script>
+
+        
+
+        <!-- QR code payment options -->
+        <div class="qr-code">
+            <p>Scan to Pay with M-Pesa App</p>
+            <img src="patreon/mpesa qr.jpg" alt="M-Pesa QR Code">
+            <a href="patreon/mpesa qr.jpg" download>Download QR Code</a>
+        </div>
+        <div class="qr-code">
+            <p>Scan to Pay with Payless</p>
+            <img src="patreon/payless qr.png" alt="Ethereum QR Code">
+            <a href="patreon/payless qr.png" download>Download QR Code</a>
+        </div>
+    </div>
+    
+    <center>   
+        <h4>Go back <a href="index.html">Home</a></h4>
+        <h4>Read <a href="index.html">Blogs</a></h4>
+    </center>
+ 
+</body>
+</html>
