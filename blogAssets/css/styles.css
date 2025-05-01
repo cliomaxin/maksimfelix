@@ -79,9 +79,16 @@
  * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap");
 
+/* local fonts */
+@font-face{
+    font-family: metropolisMedium;
+    src:url(metropolian2/metropolisMedium.otf); 
+}
+
 :root {
     --font-1    : "Inter", sans-serif;
     --font-2    : "Castoro", serif;
+    --font-3    : metropolisMedium;
 
     /* monospace
     */
@@ -1296,7 +1303,7 @@ textarea {
  * ## base type styles
  * -------------------------------------------------------------------- */
 body {
-    font-family : var(--font-1);
+    font-family : var(--font-3);
     font-size   : var(--base-font-size);
     font-weight : 400;
     line-height : var(--vspace-1);
@@ -1453,7 +1460,7 @@ blockquote {
 }
 
 blockquote p {
-    font-family : var(--font-1);
+    font-family : var(--font-3);
     font-weight : 400;
     font-size   : var(--text-lg);
     font-style  : normal;
@@ -1464,7 +1471,7 @@ blockquote p {
 
 blockquote cite {
     display     : block;
-    font-family : var(--font-1);
+    font-family : var(--font-3);
     font-weight : 400;
     font-size   : var(--text-sm);
     line-height : var(--vspace-0_75);
