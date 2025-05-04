@@ -106,7 +106,7 @@ ChatGPT 2
     .book-description {
       font-size: 1em;
       margin-bottom: 10px;
-    }
+    }  
     .download-btn {
       background-color: #00d4ff;
       border: none;
@@ -132,8 +132,10 @@ ChatGPT 2
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: #222;
-      padding: 30px;
-      border-radius: 10px;
+      padding: 10px 20px;
+      border: none;
+      margin: 4px;
+      border-radius: 5px;
       display: none;
       z-index: 999;
     }
@@ -147,6 +149,8 @@ ChatGPT 2
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 16px;
+      width: 80%;
     }
     .overlay {
       position: fixed;
@@ -167,6 +171,16 @@ ChatGPT 2
         margin-left: 0;
       }
     }
+    .popup .copy-button {
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 4px;
+        }
   </style>
 </head>
 
@@ -181,7 +195,7 @@ ChatGPT 2
   <div class="sidebar" id="sidebar">
     <h2>Menu</h2>
     <ul>
-      <li><a href="#">Self Help Books</a></li>
+      <li><a href="#">Fictional Books</a></li>
       <li><a href="#">Support Us</a></li>
       <li><a href="#">Blogs</a></li>
       <li><a href="#">About</a></li>
@@ -191,67 +205,76 @@ ChatGPT 2
   <main>
     <div class="main-content" id="main-content">
       
-    <div class="book-card">
-      <img src="assets\[Florence_Scovel_Shinn]_Your_Word_is_Your_Wand - MaxiPy productivity Hub - youtube.webp" alt="The Quantum Chronicles" loading="lazy">
-      <div class="book-info">
-        <div class="book-title">The Quantum Chronicles</div>
-        <div class="book-description">A journey through parallel worlds and the power of consciousness.</div>
-        <button class="download-btn" onclick="showPopup('The Quantum Chronicles')">Download</button>
+      <div class="book-card">
+        <img src="assets\[Florence_Scovel_Shinn]_Your_Word_is_Your_Wand - MaxiPy productivity Hub - youtube.webp" alt="The Quantum Chronicles" loading="lazy">
+        <div class="book-info">
+          <div class="book-title">The Quantum Chronicles</div>
+          <div class="book-description">A journey through parallel worlds and the power of consciousness.</div>
+          <button class="download-btn" onclick="showPopup('The Quantum Chronicles')">Download</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="assets\awaken the giant within.webp" alt="The Quantum Chronicles" loading="lazy">
+        <div class="book-info">
+          <div class="book-title">The giant within</div>
+          <div class="book-description">all about power.</div>
+          <button class="download-btn" onclick="showPopup('The giant within')">Download</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="assets\awaken the giant within.webp" alt="Water fall" loading="lazy">
+        <div class="book-info">
+          <div class="book-title">Water falls</div>
+          <div class="book-description">Water falls within earth</div>
+          <button class="download-btn" onclick="showPopup('Water falls')">Download</button>
+        </div>
+      </div>
+
+
+
+        <div class="footer">
+          <a href="#">Blogs</a> |
+          <a href="#">Fictional Books</a>|
+          <a href="patreon.html">Support the Site</a>
+          <br><br>
+          <span>Powered by <a href="https:www.facebook.com/maxipytech">MaxiPy</a>Hub</span> 
+          <br><br>
+          <small>&copy; 2024 to 2025 | Maksim Felix | All rights reserved. </p></small>
       </div>
     </div>
-
-    <div class="book-card">
-      <img src="assets\awaken the giant within.webp" alt="The Quantum Chronicles" loading="lazy">
-      <div class="book-info">
-        <div class="book-title">The giant within</div>
-        <div class="book-description">all about power.</div>
-        <button class="download-btn" onclick="showPopup('The giant within')">Download</button>
-      </div>
-    </div>
-
-    <div class="book-card">
-      <img src="assets\awaken the giant within.webp" alt="Water fall" loading="lazy">
-      <div class="book-info">
-        <div class="book-title">Water falls</div>
-        <div class="book-description">Water falls within earth</div>
-        <button class="download-btn" onclick="showPopup('Water falls')">Download</button>
-      </div>
-    </div>
-
-
-
-      <div class="footer">
-        <a href="#">Blogs</a>
-        <a href="#">Self Help Books</a>
-        <a href="patreon.html">Support the Site</a>
-        <span>Sponsored by <a href="index.html">PowerCentre</a></span>
-    </div>
-  </div>
 </main>
 
   <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
   <div class="popup" id="popup">
     <h3 id="popup-title">Download Book</h3>
     <p id="popup-book-name"></p>
-    <button onclick="alert('Starting download...')">Download Now</button>
-    <button onclick="location.href='patreon.html'">Buy Me Coffee</button>
+    <a href="assets\ebooks\The-power-of-awareness-neville-goddard - MaxiPy productivity hub - Youtube.pdf" target="_blank"><button onclick="alert('Starting download...')">Download Now</button></a>
+    <div class="payment-option">
+        <button class="copy-button" onclick="copyMpesa()">copy M-pesa number</button>
+        <button onclick="location.href='patreon.html'">More Coffee</button>
+        <div style="display: none;">
+          <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
+      </div>
+    </div>
   </div>
 
-
   <script>
-    // book popup download
-    // Called on page load
-      window.onload = () => {
-        const hash = window.location.hash;
-        if (hash.startsWith("#popup")) {
-          const id = hash.replace("#popup", "");
-          const bookCard = document.querySelector(`[data-book-id='${id}']`);
-          if (bookCard) {
-            const bookName = bookCard.getAttribute('data-book-title');
-            showPopup(bookName, id);
-          }
-        }
-      }
+    // // book popup download
+    // // Called on page load
+    //   window.onload = () => {
+    //     const hash = window.location.hash;
+    //     if (hash.startsWith("#popup")) {
+    //       const id = hash.replace("#popup", "");
+    //       const bookCard = document.querySelector(`[data-book-id='${id}']`);
+    //       if (bookCard) {
+    //         const bookName = bookCard.getAttribute('data-book-title');
+    //         showPopup(bookName, id);
+    //       }
+    //     }
+    //   }
 
       function showPopup(bookName, id) {
         document.getElementById('popup-book-name').textContent = `You're downloading: ${bookName}`;
@@ -267,6 +290,19 @@ ChatGPT 2
       const sidebar = document.getElementById('sidebar');
       sidebar.classList.toggle('hidden');
     }
+    function copyMpesa() {
+                // Get the text field
+                var copyText = document.getElementById("mpesaToCopy");
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value).then(() => {
+                    alert("WooHoo! M-pesa number copied");
+                }).catch(err => {
+                    console.error("Failed to copy M-pesa: ", err);
+                });
+            }
 </script>
 
 </body>
