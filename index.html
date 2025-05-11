@@ -87,10 +87,17 @@
 
         .popup-container{
             width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
             }    
         .popup-container h4{
             font-size: 30px;
-            }    
+            }
+        .popup-container button{
+            justify-content: center;
+            align-items: center;  
+            }        
         .book {
             width: 100%;
             max-width: 240px;
@@ -207,8 +214,8 @@
 }
 .popup-content {
     background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 10px;
     border: 1px solid #888;
     width: 70%;
 }
@@ -307,7 +314,7 @@
     color: #171718;
     text-transform: capitalize;
     text-align: center;
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 600;
     font-family:'Segoe UI';
  }
@@ -318,15 +325,15 @@
     font-size: 20px;
  }
  .copy-button {
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            margin: 4px;
-        }
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 4px;
+}
         /* textarea{
             display: none;
         } */
@@ -439,7 +446,7 @@
     </header>
 
         <!--popup1-->
-        <div id="popup1" class="popup-container fullwidth">
+        <div id="popup1" class="popup-container">
           <div class="popup-content">
             <a href="#extras" class="close">&times;</a>
             <h4>You Are Fantastic!</h4>
