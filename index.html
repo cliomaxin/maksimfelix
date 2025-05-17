@@ -436,14 +436,46 @@
 
     <main>
     <header>
-        <div class="header-main" style="display: inline-flex; flex-wrap: wrap;"></div>
-            <a href="manifesting.html" id="logoimg"><img src="assets/logo.webp" class="logoimg" alt="Maksim Felix"></a>
-            <h1> Power Center</h1>
-            <!-- <center><sub>Your Life will transform forever after scrolling down</sub></center> -->
-            <sub>Discover the importance of equipping yourself with knowledge for self-development. Once you scroll down, there's no going back...</sub>
-            <hr>
-        </div>
+      <div class="header-main" style="display: inline-flex; justify-content: space-around; flex-wrap: wrap; align-items: center;z-index: 1000;">
+        <button id="menu-icon" style="margin-left: auto; background: none; border: none; cursor: pointer; font-size: 24px; color: white;">☰</button>
+        <a href="manifesting.html" id="logoimg"><img src="assets/logo.webp" class="logoimg" alt="Maksim Felix"></a>
+        <h1>Power Center</h1>
+      </div>
+      <br>
+      <sub>Discover the importance of equipping yourself with knowledge for self-development. Once you scroll down, there's no going back...</sub>
+      <hr>
+      <div id="sidebar" style="display: none; position: fixed; top: 0; left: 0; width: 250px; height: 100%; background-color: #1a1a1a; color: white; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.5); z-index: 1000;">
+        <button id="close-sidebar" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer; margin-bottom: 20px;">&times;</button>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="fictional.html" style="color: #ffcc00; text-decoration: none; display: block; margin-bottom: 10px;">Fictional Books</a></li>
+          <li><a href="manifesting.html" style="color: #ffcc00; text-decoration: none; display: block; margin-bottom: 10px;">Blogs</a></li>
+          <li><a href="https://facebook.com/kenobimaksim" style="color: #ffcc00; text-decoration: none; display: block; margin-bottom: 10px;">About Maksim Felix</a></li>
+          <li><a href="#" style="color: #ffcc00; text-decoration: none; display: block; margin-bottom: 10px;">Our Story</a></li>
+          <li><a href="patreon.html" style="color: #ffcc00; text-decoration: none; display: block; margin-bottom: 10px;">Support Us</a></li>
+        </ul>
+      </div>
     </header>
+
+    <script>
+      const menuIcon = document.getElementById('menu-icon');
+      const sidebar = document.getElementById('sidebar');
+      const closeSidebar = document.getElementById('close-sidebar');
+
+      menuIcon.addEventListener('click', () => {
+        sidebar.style.display = 'block';
+      });
+
+      closeSidebar.addEventListener('click', () => {
+        sidebar.style.display = 'none';
+      });
+
+      // Close sidebar when clicking outside of it
+      window.addEventListener('click', (e) => {
+        if (e.target !== sidebar && e.target !== menuIcon && !sidebar.contains(e.target)) {
+          sidebar.style.display = 'none';
+        }
+      });
+    </script>
 
         <!--popup1-->
         <div id="popup1" class="popup-container">
@@ -1194,9 +1226,9 @@ and that is also true if you are a housewife, architect or engineer...
 
     <hr style="border: none; height: 2px; background-color: #fff; margin: 20px 0; margin-top: 8%;">
     <bold id="extras">#Extras</bold>
-    <h2>You will never be the same after watching this...</h2>
+    <h2>Watch this life-changing video...</h2>
     <div class="video-section" style="background-color: #007bff; display: flex; justify-content: center;">
-        <p style="color: #fff">(The video is temporarily unavailable on this site. However, you can click -- <a class="twinkling-text" href="https://www.youtube.com/embed/lqqrkskqJ5U">THIS LINK</a>  -- to watch it on YouTube. Apologies for the inconveniences)</p>
+      <p style="color: #fff">Video unavailable here. Watch it on <a class="twinkling-text" href="https://www.youtube.com/embed/lqqrkskqJ5U">YouTube</a>.</p>
         <!-- <iframe width="560" height="315" src="https://cliomaxin.github.io/powercentre/assets/JulianRoz%20tiktok.mp4"
         preload="none" src="video.mp4" autoplay="false" poster="assets/videothumbnail.webp" muted="false" loop="false"
                     title="Maksim Felix Portfolio Video" 
