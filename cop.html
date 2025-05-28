@@ -1,19 +1,117 @@
-Copilot 2
-
-Great updates! Here's an enhanced version of the **futuristic book exploration page** with:
-- **A retractable sidebar controlled by a fixed icon**
-- **An image logo beside the menu icon in the navbar**
-- **Each book featuring a title, description, an image, and a download button**
-
-### **Updated HTML - Fictional Books Hub**
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fictional Books Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #ff0080, #8000ff);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            transition: 0.3s;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        main {
+            margin-left: 20px;
+            padding: 20px;
+        }
+
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .book {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .book img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .download-btn {
+            background-color: #00ffcc;
+            border: none;
+            padding: 10px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -70,143 +168,25 @@ Great updates! Here's an enhanced version of the **futuristic book exploration p
         <p>Sponsored by <a href="index.html">PowerCentre</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+        }
+
+        function openPopup(bookName) {
+            document.getElementById("book-title").innerText = "Download " + bookName;
+            document.getElementById("popup-box").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup-box").style.display = "none";
+        }
+    </script>
+    
+    
 </body>
 </html>
-```
 
----
 
-### **Updated CSS - Styling with Futuristic Elements**
-```css
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #ff0080, #8000ff);
-    color: white;
-    margin: 0;
-    padding: 0;
-}
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.logo {
-    width: 50px;
-    height: auto;
-}
-
-.menu-icon {
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.sidebar {
-    position: fixed;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    padding-top: 20px;
-    transition: 0.3s;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li a {
-    display: block;
-    padding: 15px;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-main {
-    margin-left: 20px;
-    padding: 20px;
-}
-
-.book-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.book {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.book img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.download-btn {
-    background-color: #00ffcc;
-    border: none;
-    padding: 10px;
-    color: black;
-    cursor: pointer;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.2);
-}
-```
-
----
-
-### **Updated JavaScript - Sidebar & Popup Logic**
-```javascript
-function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
-}
-
-function openPopup(bookName) {
-    document.getElementById("book-title").innerText = "Download " + bookName;
-    document.getElementById("popup-box").style.display = "block";
-}
-
-function closePopup() {
-    document.getElementById("popup-box").style.display = "none";
-}
-```
-
----
-
-This version keeps **UI sleek & interactive** while ensuring it works on **mobile & large screens.** The sidebar **slides in and out smoothly** when the menu icon is clicked. The **image logo** gives the navbar branding, and each book now **features images** for a richer experience.
-
-Would you like any **additional animations or interactive effects**? 🌟🚀
