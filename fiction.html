@@ -175,12 +175,29 @@ ChatGPT 2
             cursor: pointer;
             background: #4CAF50;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            margin: 4px;
         }
+
+    .responsive-btn {
+      padding: 10px 15px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #00d4ff;
+      color: #000;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+      display: block;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .responsive-btn {
+        font-size: 0.9em;
+        padding: 8px 12px;
+      }
+    }    
   </style>
 </head>
 
@@ -188,7 +205,7 @@ ChatGPT 2
 <body>
   <div class="navbar">
     <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
-    <span class="title">PowerCenter</span>
+    <span class="title">Fictional Explorer</span>
     <img src="assets\logo.webp" alt="Logo">
   </div>
 
@@ -204,30 +221,17 @@ ChatGPT 2
 
   <main>
     <div class="main-content" id="main-content">
-      
-      <div class="book-card">
-        <img src="assets\[Florence_Scovel_Shinn]_Your_Word_is_Your_Wand - MaxiPy productivity Hub - youtube.webp" alt="The Quantum Chronicles" loading="lazy">
-        <div class="book-info">
-          <div class="book-title">The Quantum Chronicles</div>
-          <div class="book-description">A journey through parallel worlds and the power of consciousness.</div>
-          <button class="download-btn" onclick="showPopup('The Quantum Chronicles')">Download</button>
-        </div>
-      </div>
-
-      <div class="book-card">
-        <img src="assets\awaken the giant within.webp" alt="The Quantum Chronicles" loading="lazy">
-        <div class="book-info">
-          <div class="book-title">The giant within</div>
-          <div class="book-description">all about power.</div>
-          <button class="download-btn" onclick="showPopup('The giant within')">Download</button>
-        </div>
-      </div>
+      <h1>Fictional Explorer</h1>
+      <p>Explore our collection of fictional books and download your favorites!</p>
+      <br><br>
 
       <div class="book-card">
         <img src="assets\awaken the giant within.webp" alt="Water fall" loading="lazy">
         <div class="book-info">
-          <div class="book-title">Water falls</div>
-          <div class="book-description">Water falls within earth</div>
+          <div class="book-title">Behind the Red Door</div>
+          <div class="book-description">It was Lily who turned things around for me. Lily who made me see
+            the magic in Lilith again. Because I had walked away, yes, I had set certain
+            things in motion—but what could this girl have done?</div>
           <button class="download-btn" onclick="showPopup('Water falls')">Download</button>
         </div>
       </div>
@@ -248,62 +252,62 @@ ChatGPT 2
 
   <div class="overlay" id="overlay" onclick="hidePopup()"></div>
 
-  <div class="popup" id="popup">
-    <h3 id="popup-title">Download Book</h3>
-    <p id="popup-book-name"></p>
-    <a href="assets\ebooks\The-power-of-awareness-neville-goddard - MaxiPy productivity hub - Youtube.pdf" target="_blank"><button onclick="alert('Starting download...')">Download Now</button></a>
-    <div class="payment-option">
-        <button class="copy-button" onclick="copyMpesa()">copy M-pesa number</button>
-        <button onclick="location.href='patreon.html'">More Coffee</button>
-        <div style="display: none;">
-          <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
+  <!-- Individual popups for each book -->
+  <div class="popup" id="popup-water-falls">
+    <h3>Download: Water Falls</h3>
+    <p>You're downloading: Water Falls</p>
+    <a href="assets/ebooks/Water-Falls.pdf" target="_blank">
+      <button class="responsive-btn" onclick="alert('Starting download...')">Download Now</button>
+    </a>
+
+    <br>
+    <div class="payment-option" style="text-align: center;">
+      <button class="responsive-btn copy-button" onclick="copyMpesa()">Copy M-pesa N°</button>
+      <button class="responsive-btn" onclick="location.href='patreon.html'">More Coffee</button>
+      <div style="display: none;">
+        <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
       </div>
     </div>
   </div>
 
+
   <script>
-    // // book popup download
-    // // Called on page load
-    //   window.onload = () => {
-    //     const hash = window.location.hash;
-    //     if (hash.startsWith("#popup")) {
-    //       const id = hash.replace("#popup", "");
-    //       const bookCard = document.querySelector(`[data-book-id='${id}']`);
-    //       if (bookCard) {
-    //         const bookName = bookCard.getAttribute('data-book-title');
-    //         showPopup(bookName, id);
-    //       }
-    //     }
-    //   }
-
-      function showPopup(bookName, id) {
-        document.getElementById('popup-book-name').textContent = `You're downloading: ${bookName}`;
-        document.getElementById('popup-title').textContent = `Download: ${bookName}`;
+    function showPopup(bookName) {
+      const popupId = `popup-${bookName.toLowerCase().replace(/\s+/g, '-')}`;
+      const popup = document.getElementById(popupId);
+      if (popup) {
         document.getElementById('overlay').style.display = 'block';
-        const popup = document.getElementById('popup');
         popup.style.display = 'block';
-        popup.id = `popup${id}`; // assign unique id to popup
+      } else {
+        console.error(`Popup for ${bookName} not found.`);
       }
+    }
 
-      // sidebar toggle
-      function toggleSidebar() {
+    function hidePopup() {
+      document.getElementById('overlay').style.display = 'none';
+      const popups = document.querySelectorAll('.popup');
+      popups.forEach(popup => popup.style.display = 'none');
+    }
+
+    // sidebar toggle
+    function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
       sidebar.classList.toggle('hidden');
     }
     function copyMpesa() {
-                // Get the text field
-                var copyText = document.getElementById("mpesaToCopy");
-                // Select the text field
-                copyText.select();
-                copyText.setSelectionRange(0, 99999); // For mobile devices
-                // Copy the text inside the text field
-                navigator.clipboard.writeText(copyText.value).then(() => {
-                    alert("WooHoo! M-pesa number copied");
-                }).catch(err => {
-                    console.error("Failed to copy M-pesa: ", err);
-                });
-            }
-</script>
+      // Get the text field
+      var copyText = document.getElementById("mpesaToCopy");
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value).then(() => {
+        alert("WooHoo! M-pesa number copied");
+      }).catch(err => {
+        console.error("Failed to copy M-pesa: ", err);
+      });
+    }
+  </script>
 
 </body>
 </html>
