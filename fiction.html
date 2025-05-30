@@ -243,13 +243,25 @@ ChatGPT 2
       <br><br>
 
       <div class="book-card">
-        <img src="assets/fictional ebooks/Behind the Red Door  - Maxipy Productivity Hub - Youtube.jpg" alt="Behind the Red Door" loading="lazy">
+        <img src="assets/fictional ebooks/Behind the Red Door  - Maxipy Productivity Hub - Youtube.jpg" alt="Behind the Red Door book cover" loading="lazy">
         <div class="book-info">
           <div class="book-title">Behind the Red Door</div>
           <div class="book-description">It was Lily who turned things around for me. Lily who made me see
             the magic in Lilith again. Because I had walked away, yes, I had set certain
             things in motion—but what could this girl have done?</div>
           <button class="download-btn" onclick="showPopup('book1')">Download</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img src="assets/fictional ebooks/The_Silent_Patien_Alex_MichaElides - Maxipy Productivity Hub - Youtube.jpeg" alt="The Silent Patient book cover" loading="lazy">
+        <div class="book-info">
+          <div class="book-title">The Silent Patient</div>
+          <div class="book-description">Gabriel Berenson was murdered six years ago. He was forty-four
+years old. He was killed on the twenty-fifth of August—it was an
+unusually hot summer, you may remember, with some of the high-
+est temperatures ever recorded... </div>
+          <button class="download-btn" onclick="showPopup('book2')">Download</button>
         </div>
       </div>
 
@@ -260,7 +272,7 @@ ChatGPT 2
           <a href="index.html">Self Help Books</a>|
           <a href="patreon.html">Support the Site</a>
           <br><br>
-          <span>Powered by <a href="https:www.facebook.com/maxipytech">MaxiPy</a></span> 
+          <span>Powered by <a href="index.html">Power Centre</a></span> 
           <br><br>
           <small>&copy; 2024 to 2025 | Maksim Felix | All rights reserved. </p></small>
       </div>
@@ -273,6 +285,22 @@ ChatGPT 2
   <div class="popup" id="popup-book1">
     <h3>Download: Behind the Red Door</h3>
     <a href="assets/fictional ebooks/Behind_the_Red_Door_-_Megan_Collins - Maxipy Productivity Hub - Youtube.pdf" target="_blank">
+      <button class="responsive-btn" onclick="alert('Starting download...')">Download Now</button>
+    </a>
+    <br>
+    <span>#motivation</span>
+    <div class="payment-option" style="text-align: center;">
+      <button class="responsive-btn copy-button" onclick="copyMpesa()">Copy M-pesa N°</button>
+      <button class="responsive-btn" onclick="location.href='patreon.html'">More Coffee</button>
+      <div style="display: none;">
+        <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup-book2">
+    <h3>Download: The Silent Patient</h3>
+    <a href="assets/fictional ebooks/The_Silent_Patien_Alex_MichaElides - Maxipy Productivity Hub - Youtube.pdf" target="_blank">
       <button class="responsive-btn" onclick="alert('Starting download...')">Download Now</button>
     </a>
     <br>

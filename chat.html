@@ -176,6 +176,28 @@ ChatGPT 2
             background: #4CAF50;
             color: white;
         }
+
+    .responsive-btn {
+      padding: 10px 15px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #00d4ff;
+      color: #000;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+      display: block;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .responsive-btn {
+        font-size: 0.9em;
+        padding: 8px 12px;
+      }
+    }    
   </style>
 </head>
 
@@ -245,30 +267,6 @@ ChatGPT 2
       </div>
     </div>
   </div>
-
-  <style>
-    .responsive-btn {
-      padding: 10px 15px;
-      font-size: 1em;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #00d4ff;
-      color: #000;
-      width: 100%;
-      max-width: 300px;
-      margin: 10px auto;
-      display: block;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .responsive-btn {
-        font-size: 0.9em;
-        padding: 8px 12px;
-      }
-    }
-  </style>
 
   <script>
     function showPopup(bookName) {
