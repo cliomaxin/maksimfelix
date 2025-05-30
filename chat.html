@@ -15,7 +15,7 @@ ChatGPT 2
     body {
       font-family: 'Segoe UI', sans-serif;
       min-height: 100vh;
-      background: linear-gradient(120deg,  #8000ff, #ff0080de);
+      background: linear-gradient(to right, #1e3c72, #2a5298);
       color: #fff;
     }
     .navbar {
@@ -91,9 +91,7 @@ ChatGPT 2
       align-items: center;
     }
     .book-card img {
-      height: 200px; /* Enlarge book image */
-      width: auto;
-      max-width: 100%; /* Ensure responsiveness */
+      height: 100px;
       margin-right: 20px;
       border-radius: 5px;
     }
@@ -140,21 +138,6 @@ ChatGPT 2
       border-radius: 5px;
       display: none;
       z-index: 999;
-      width: 90%; /* Default width */
-      max-width: 500px;
-      height: auto; /* Adjust height to content */
-      text-align: center; /* Center all text inside the popup */
-    }
-    @media (max-width: 700px) {
-      .popup {
-        width: 100%; /* Full width on mobile */
-        max-width: none; /* Remove max-width for mobile */
-        height: auto; /* Adjust height to content */
-        top: 50%; /* Center vertically */
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%); /* Center alignment */
-        border-radius: 0; /* Remove border radius for full-screen effect */
-      }
     }
     .popup h3 {
       margin-bottom: 10px;
@@ -193,7 +176,77 @@ ChatGPT 2
             background: #4CAF50;
             color: white;
         }
+  </style>
+</head>
 
+
+<body>
+  <div class="navbar">
+    <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
+    <span class="title">Fictional Explorer</span>
+    <img src="assets\logo.webp" alt="Logo">
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Fictional Books</a></li>
+      <li><a href="#">Support Us</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="main-content" id="main-content">
+      <h1>Fictional Explorer</h1>
+      <p>Explore our collection of fictional books and download your favorites!</p>
+      <br><br>
+
+      <div class="book-card">
+        <img src="assets\awaken the giant within.webp" alt="Water fall" loading="lazy">
+        <div class="book-info">
+          <div class="book-title">Water falls</div>
+          <div class="book-description">Water falls within earth</div>
+          <button class="download-btn" onclick="showPopup('Water falls')">Download</button>
+        </div>
+      </div>
+
+
+
+        <div class="footer">
+          <a href="#">Blogs</a> |
+          <a href="#">Fictional Books</a>|
+          <a href="patreon.html">Support the Site</a>
+          <br><br>
+          <span>Powered by <a href="https:www.facebook.com/maxipytech">MaxiPy</a></span> 
+          <br><br>
+          <small>&copy; 2024 to 2025 | Maksim Felix | All rights reserved. </p></small>
+      </div>
+    </div>
+</main>
+
+  <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
+  <!-- Individual popups for each book -->
+  <div class="popup" id="popup-water-falls">
+    <h3>Download: Water Falls</h3>
+    <p>You're downloading: Water Falls</p>
+    <a href="assets/ebooks/Water-Falls.pdf" target="_blank">
+      <button class="responsive-btn" onclick="alert('Starting download...')">Download Now</button>
+    </a>
+
+    <br>
+    <div class="payment-option" style="text-align: center;">
+      <button class="responsive-btn copy-button" onclick="copyMpesa()">Copy M-pesa N°</button>
+      <button class="responsive-btn" onclick="location.href='patreon.html'">More Coffee</button>
+      <div style="display: none;">
+        <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
+      </div>
+    </div>
+  </div>
+
+  <style>
     .responsive-btn {
       padding: 10px 15px;
       font-size: 1em;
@@ -214,88 +267,18 @@ ChatGPT 2
         font-size: 0.9em;
         padding: 8px 12px;
       }
-    }    
+    }
   </style>
-</head>
 
-
-<body>
-  <div class="navbar">
-    <span class="toggle-btn" onclick="toggleSidebar()">&#9776;</span>
-    <span class="title">Fictional Explorer</span>
-    <img src="assets\logo.webp" alt="Logo">
-  </div>
-
-  <div class="sidebar hidden" id="sidebar">
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="index.html">Self Help Books</a></li>
-      <li><a href="patreon.html">Support Us</a></li>
-      <li><a href="manifesting.html">Blogs</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </div>
-
-  <main>
-    <div class="main-content" id="main-content">
-      <h1>Fictional Explorer</h1>
-      <p>Explore our collection of fictional books and download your favorites!</p>
-      <br><br>
-
-      <div class="book-card">
-        <img src="assets/fictional ebooks/Behind the Red Door  - Maxipy Productivity Hub - Youtube.jpg" alt="Behind the Red Door" loading="lazy">
-        <div class="book-info">
-          <div class="book-title">Behind the Red Door</div>
-          <div class="book-description">It was Lily who turned things around for me. Lily who made me see
-            the magic in Lilith again. Because I had walked away, yes, I had set certain
-            things in motion—but what could this girl have done?</div>
-          <button class="download-btn" onclick="showPopup('book1')">Download</button>
-        </div>
-      </div>
-
-
-
-        <div class="footer">
-          <a href="manifesting.html">Blogs</a> |
-          <a href="index.html">Self Help Books</a>|
-          <a href="patreon.html">Support the Site</a>
-          <br><br>
-          <span>Powered by <a href="https:www.facebook.com/maxipytech">MaxiPy</a></span> 
-          <br><br>
-          <small>&copy; 2024 to 2025 | Maksim Felix | All rights reserved. </p></small>
-      </div>
-    </div>
-</main>
-
-  <div class="overlay" id="overlay" onclick="hidePopup()"></div>
-
-  <!-- Individual popups for each book -->
-  <div class="popup" id="popup-book1">
-    <h3>Download: Behind the Red Door</h3>
-    <a href="assets/fictional ebooks/Behind_the_Red_Door_-_Megan_Collins - Maxipy Productivity Hub - Youtube.pdf" target="_blank">
-      <button class="responsive-btn" onclick="alert('Starting download...')">Download Now</button>
-    </a>
-    <br>
-    <span>#motivation</span>
-    <div class="payment-option" style="text-align: center;">
-      <button class="responsive-btn copy-button" onclick="copyMpesa()">Copy M-pesa N°</button>
-      <button class="responsive-btn" onclick="location.href='patreon.html'">More Coffee</button>
-      <div style="display: none;">
-        <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Add more popups with unique IDs as needed -->
   <script>
-    function showPopup(bookId) {
-      const popup = document.getElementById(`popup-${bookId}`);
+    function showPopup(bookName) {
+      const popupId = `popup-${bookName.toLowerCase().replace(/\s+/g, '-')}`;
+      const popup = document.getElementById(popupId);
       if (popup) {
         document.getElementById('overlay').style.display = 'block';
         popup.style.display = 'block';
       } else {
-        console.error(`Popup for ${bookId} not found.`);
+        console.error(`Popup for ${bookName} not found.`);
       }
     }
 
@@ -305,22 +288,18 @@ ChatGPT 2
       popups.forEach(popup => popup.style.display = 'none');
     }
 
+    // sidebar toggle
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
       sidebar.classList.toggle('hidden');
     }
-
-    document.addEventListener('click', (event) => {
-      const sidebar = document.getElementById('sidebar');
-      if (!sidebar.contains(event.target) && !event.target.classList.contains('toggle-btn')) {
-        sidebar.classList.add('hidden');
-      }
-    });
-
     function copyMpesa() {
-      const copyText = document.getElementById("mpesaToCopy");
+      // Get the text field
+      var copyText = document.getElementById("mpesaToCopy");
+      // Select the text field
       copyText.select();
-      copyText.setSelectionRange(0, 99999);
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+      // Copy the text inside the text field
       navigator.clipboard.writeText(copyText.value).then(() => {
         alert("WooHoo! M-pesa number copied");
       }).catch(err => {
