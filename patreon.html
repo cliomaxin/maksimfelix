@@ -117,6 +117,60 @@
             font-size: 16px;
         }
 
+        footer{
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align:center;
+            background-color: #000000;
+            color: #fff;
+        }
+        /* row 
+        */
+        .row {
+            width     : 92%;
+            max-width : var(--width-grid-max);
+            margin    : 0 auto;
+            display   : flex;
+            flex-flow : row wrap;
+        }
+
+        .row .row {
+            width        : auto;
+            max-width    : none;
+            margin-left  : calc(var(--gutter) * -1);
+            margin-right : calc(var(--gutter) * -1);
+        }
+        /* column*/
+        .column {
+            display : block;
+            flex    : 1 1 0%;
+            padding : 0 var(--gutter);
+        }
+
+        .collapse>.column,
+        .column.collapse {
+            padding : 0;
+        }
+        footer .link-list {
+            list-style  : none;
+            margin-left : 0;
+        }
+
+        footer .link-list li {
+            padding-left : 0;
+        }
+
+        footer .link-list a {
+            color  : var(--color-text);
+            border : none;
+        }
+
+        footer .link-list a:focus,
+        footer .link-list a:hover,
+        footer .link-list a:active {
+            color : var(--color-1);
+        }
     </style>
 </head>
 <body>
@@ -205,10 +259,28 @@
         </div>
     </div>
 
-    <center>   
-        <h4>Go back <a href="index.html">Home</a></h4>
-        <h4>Read <a href="manifesting.html">Blogs</a></h4>
-    </center>
+    <footer>
+         <div class="column lg-5 md-6 tab-12">
+                    <div class="row">
+                        <div class="column lg-6">
+                            <h4>Blog Categories</h4>
+                            <ul class="link-list">
+                                <li><a href="blogs.html">Manifesting</a></li>
+                                <li><a href="blogs.html">Spiritual</a></li>
+                        </div>
+                        <div class="column lg-6">
+                            <h4>Site Links</h4>
+                            <ul class="link-list">
+                                <li><a href="blogs.html">Blogs</a></li>
+                                <li><a href="index.html">Self Help Books</a></li>
+                                <li><a href="fiction.html">Fiction Books</a></li>
+                                <li><a href="patreon.html">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    </footer>
+
  
 </body>
 </html>
