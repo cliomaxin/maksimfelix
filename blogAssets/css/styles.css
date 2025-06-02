@@ -5219,6 +5219,9 @@ body.search-is-visible .s-header__search-inner {
     color       : var(--color-text-light);
     margin-top  : var(--vspace-0_125);
 }
+h3{
+    color: rgb(7, 118, 138);
+}
 
 /* comments
  * -------------------------------------------------- */
