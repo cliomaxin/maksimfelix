@@ -116,6 +116,15 @@
             border-radius: 5px;
             font-size: 16px;
         }
+        .copy-button4 {
+            cursor: pointer;
+            background-color: #fcb92a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
         footer{
             display: block;
@@ -192,6 +201,10 @@
             <button class="copy-button3" onclick="copyEversend()">copy Eversend tag</button>
         </div>
         <div class="payment-option">
+            <span><strong>Bitcoin (BTC network)</strong></span>
+            <button class="copy-button4" onclick="copyBitcoin()">copy Bitcoin address</button>
+        </div>
+        <div class="payment-option">
             <span><strong>PayPal</strong></span>
             <button class="copy-button2" onclick="copyPaypal()">copy PayPal address</button>
         </div>
@@ -200,6 +213,7 @@
             <textarea id="mpesaToCopy" rows="4" cols="50">0721899388</textarea>
             <textarea id="paypalToCopy" rows="6" cols="60">kenobimaksimfelix@gmail.com</textarea>
             <textarea id="eversendToCopy" rows="6" cols="60">https://eversend.me/maksimfelix</textarea>
+            <textarea id="bitcoinToCopy" rows="6" cols="60">19vLLDPfkuSpggBPvTMz5qNveaYBkfXXKM</textarea>
         </div>
 
         <script>
@@ -237,7 +251,20 @@
                 copyPaypal.setSelectionRange(0, 99999); // For mobile devices
                 // Copy the paypal inside the text field
                 navigator.clipboard.writeText(copyPaypal.value).then(() => {
-                    alert("WooHoo! Eversend address copied");
+                    alert("WooHoo! Eversend tag copied");
+                }).catch(err => {
+                    console.error("Failed to copy Eversend address: ", err);
+                });
+            }
+            function copyBitcoin() {
+                // Get the paypal email field
+                var copyPaypal = document.getElementById("bitcoinToCopy");
+                // Select the paypal address field
+                copyPaypal.select();
+                copyPaypal.setSelectionRange(0, 99999); // For mobile devices
+                // Copy the paypal inside the text field
+                navigator.clipboard.writeText(copyPaypal.value).then(() => {
+                    alert("WooHoo! Bitcoin address copied");
                 }).catch(err => {
                     console.error("Failed to copy Eversend address: ", err);
                 });
