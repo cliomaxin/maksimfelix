@@ -125,6 +125,33 @@
             border-radius: 5px;
             font-size: 16px;
         }
+        .copy-button5 {
+         background-color: #1F2937; 
+         color: yellow; 
+         padding: 10px 20px; 
+         border: none; 
+         border-radius: 5px; 
+         font-size: 16px; 
+         cursor: pointer;
+        }
+        .copy-button6 {
+         background-color: #82AD37; 
+         color: #fff; 
+         padding: 10px 20px; 
+         border: none; 
+         border-radius: 5px; 
+         font-size: 16px; 
+         cursor: pointer;
+        }
+        .copy-button6a {
+         background-color: #82AD37; 
+         color: #fff; 
+         padding: 10px 20px; 
+         border: none; 
+         border-radius: 5px; 
+         font-size: 16px; 
+         cursor: pointer;
+        }
 
         footer{
             display: block;
@@ -185,104 +212,168 @@
 <body>
     <div class="container">
         <!-- Add logo here -->
-        <div style="text-align: center; margin-bottom: 20px;">
+        <div style="text-align: center; margin-bottom: 40px;">
             <img src="assets\logo.webp" alt="PowerCenter Logo" style="max-width: 50px; height: auto;">
         </div>
-        <h1>Patreon</h1>
-        <span><i>Your small contribution keeps the site running and helps us add more great books and knowledge for everyone.</i><br><br> <center><strong>(M-pesa display name - Maxwell)</strong></center></span>
-        <br><br><br>
+
+        <h1 style="margin-bottom: 30px;">Patreon</h1>
+
+        <span style="line-height: 1.8; display: block; margin-bottom: 40px;">
+            <i>Your small contribution keeps the site running and helps us add more great books and knowledge for everyone.</i>
+            <br><br>
+            <center><strong>(M-pesa display name - Maxwell)</strong></center>
+        </span>
+
         <!-- Link-based payment options -->
-        <div class="payment-option">
-            <span><strong>M-Pesa</strong></span>
-            <button class="copy-button" onclick="copyMpesa()">copy M-pesa number</button>
-        </div>
-        <div class="payment-option">
-            <span><strong>EverSend</strong></span>
-            <button class="copy-button3" onclick="copyEversend()">copy Eversend tag</button>
-        </div>
-        <div class="payment-option">
-            <span><strong>Bitcoin (BTC network)</strong></span>
-            <button class="copy-button4" onclick="copyBitcoin()">copy Bitcoin address</button>
-        </div>
-        <div class="payment-option">
-            <span><strong>PayPal</strong></span>
-            <button class="copy-button2" onclick="copyPaypal()">copy PayPal address</button>
+        <div style="margin: 50px 0; padding: 30px; border: 2px solid #ddd; border-radius: 8px; background: #f9f9f9;">
+            <h3 style="margin-top: 0; margin-bottom: 30px; color: #444;">Choose a Payment Method</h3>
+            
+            <div class="payment-option" style="margin-bottom: 20px;">
+                <span><strong>Sendwave</strong></span>
+                <button class="copy-button5" onclick="copySendwave()">copy Sendwave number</button>
+            </div>
+
+            <div class="payment-option" style="margin-bottom: 20px;">
+                <span><strong>M-Pesa</strong></span>
+                <button class="copy-button" onclick="copyMpesa()">copy M-pesa number</button>
+            </div>
+            
+            <div class="payment-option" style="margin-bottom: 20px;">
+                <span><strong>PayPal</strong></span>
+                <button class="copy-button2" onclick="copyPaypal()">copy PayPal address</button>
+            </div>
+            
+            <div class="payment-option" style="margin-bottom: 20px;">
+                <span><strong>EverSend</strong></span>
+                <button class="copy-button3" onclick="copyEversend()">copy Eversend tag</button>
+            </div>
+            
+            <div class="payment-option" style="margin-bottom: 20px;">
+                <span><strong>Bitcoin (BTC network)</strong></span>
+                <button class="copy-button4" onclick="copyBitcoin()">copy Bitcoin address</button>
+            </div>
+
+            <div class="payment-option" style="margin-bottom: 0;">
+                <span><strong>Cooperative Bank</strong></span>
+                <div style="text-align: right;">
+                    <p style="margin: 10px 0;">Paybill: <strong>400200</strong></p>
+                    <button class="copy-button6" onclick="copyCooperativePaybill()">Copy Paybill</button>
+                    <p style="margin: 15px 0 10px 0;">Account Number: <strong>1103917</strong></p>
+                    <button class="copy-button6a" onclick="copyCooperativeAccount()">Copy Account Number</button>
+                </div>
+            </div>
         </div>
 
         <div style="display: none;">
-            <textarea id="mpesaToCopy" rows="4" cols="50">0721899388</textarea>
+            <textarea id="mpesaToCopy" rows="4" cols="50">0728278258</textarea>
             <textarea id="paypalToCopy" rows="6" cols="60">kenobimaksimfelix@gmail.com</textarea>
             <textarea id="eversendToCopy" rows="6" cols="60">https://eversend.me/maksimfelix</textarea>
             <textarea id="bitcoinToCopy" rows="6" cols="60">19vLLDPfkuSpggBPvTMz5qNveaYBkfXXKM</textarea>
+            <textarea id="sendWaveToCopy" rows="6" cols="60">+254728278258</textarea>
+            <textarea id="cooperativePaybillToCopy" rows="6" cols="60">400200</textarea>
+            <textarea id="cooperativeAccToCopy" rows="6" cols="60">1103917</textarea>
         </div>
 
         <script>
-            function copyMpesa() {
-                // Get the text field
-                var copyText = document.getElementById("mpesaToCopy");
-                // Select the text field
+            function copySendwave() {
+                var copyText = document.getElementById("sendWaveToCopy");
                 copyText.select();
-                copyText.setSelectionRange(0, 99999); // For mobile devices
-                // Copy the text inside the text field
+                copyText.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(copyText.value).then(() => {
+                    alert("WooHoo! SendWave address copied");
+                }).catch(err => {
+                    console.error("Failed to copy Sendwave address: ", err);
+                });
+            }
+
+            function copyMpesa() {
+                var copyText = document.getElementById("mpesaToCopy");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
                 navigator.clipboard.writeText(copyText.value).then(() => {
                     alert("WooHoo! M-pesa number copied");
                 }).catch(err => {
                     console.error("Failed to copy M-pesa: ", err);
                 });
             }
+
             function copyPaypal() {
-                // Get the paypal email field
                 var copyPaypal = document.getElementById("paypalToCopy");
-                // Select the paypal address field
                 copyPaypal.select();
-                copyPaypal.setSelectionRange(0, 99999); // For mobile devices
-                // Copy the paypal inside the text field
+                copyPaypal.setSelectionRange(0, 99999);
                 navigator.clipboard.writeText(copyPaypal.value).then(() => {
                     alert("WooHoo! PayPal address copied");
                 }).catch(err => {
                     console.error("Failed to copy PayPal address: ", err);
                 });
             }
+
             function copyEversend() {
-                // Get the paypal email field
                 var copyPaypal = document.getElementById("eversendToCopy");
-                // Select the paypal address field
                 copyPaypal.select();
-                copyPaypal.setSelectionRange(0, 99999); // For mobile devices
-                // Copy the paypal inside the text field
+                copyPaypal.setSelectionRange(0, 99999);
                 navigator.clipboard.writeText(copyPaypal.value).then(() => {
                     alert("WooHoo! Eversend tag copied");
                 }).catch(err => {
                     console.error("Failed to copy Eversend address: ", err);
                 });
             }
+
             function copyBitcoin() {
-                // Get the paypal email field
                 var copyPaypal = document.getElementById("bitcoinToCopy");
-                // Select the paypal address field
                 copyPaypal.select();
-                copyPaypal.setSelectionRange(0, 99999); // For mobile devices
-                // Copy the paypal inside the text field
+                copyPaypal.setSelectionRange(0, 99999);
                 navigator.clipboard.writeText(copyPaypal.value).then(() => {
                     alert("WooHoo! Bitcoin address copied");
                 }).catch(err => {
-                    console.error("Failed to copy Eversend address: ", err);
+                    console.error("Failed to copy Bitcoin address: ", err);
+                });
+            }
+
+            function copyCooperativePaybill() {
+                var copyPaypal = document.getElementById("cooperativePaybillToCopy");
+                copyPaypal.select();
+                copyPaypal.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(copyPaypal.value).then(() => {
+                    alert("WooHoo! Cooperative Bank Paybill copied");
+                }).catch(err => {
+                    console.error("Failed to copy Cooperative Bank Paybill: ", err);
+                });
+            }
+
+            function copyCooperativeAccount() {
+                var copyPaypal = document.getElementById("cooperativeAccToCopy");
+                copyPaypal.select();
+                copyPaypal.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(copyPaypal.value).then(() => {
+                    alert("WooHoo! Cooperative Bank, Account Number copied");
+                }).catch(err => {
+                    console.error("Failed to copy Cooperative Bank Account Number: ", err);
                 });
             }
         </script>
 
-        
-
         <!-- QR code payment options -->
-        <div class="qr-code">
-            <p>Scan to Pay with Payless App</p>
-            <img src="patreon/payless qr.png" alt="Ethereum QR Code">
-            <a href="patreon/payless qr.png" download>Download QR Code</a>
-        </div>
-        <div class="qr-code">
-            <p>Scan to Pay with M-Pesa App</p>
-            <img src="patreon/mpesa qr.jpg" alt="M-Pesa QR Code">
-            <a href="patreon/mpesa qr.jpg" download>Download QR Code</a>
+        <div style="margin-top: 60px;">
+            <h3 style="margin-bottom: 30px; color: #444;">QR Code Payment Options</h3>
+            
+            <div class="qr-code" style="margin-bottom: 50px;">
+                <p style="margin-bottom: 20px;">Scan to Pay with Payless App</p>
+                <img src="patreon/payless qr.png" alt="Ethereum QR Code">
+                <a href="patreon/payless qr.png" download style="margin-top: 15px;">Download QR Code</a>
+            </div>
+
+            <div class="qr-code" style="margin-bottom: 50px;">
+                <p style="margin-bottom: 20px;">Scan to Pay with M-Pesa App</p>
+                <img src="patreon/mpesa qr.jpg" alt="M-Pesa QR Code">
+                <a href="patreon/mpesa qr.jpg" download style="margin-top: 15px;">Download QR Code</a>
+            </div>
+
+            <div class="qr-code">
+                <p style="margin-bottom: 20px;">Scan to Pay with Cooperative Bank App</p>
+                <img src="patreon/cooperativeBankQR.PNG" alt="Cooperative Bank QR Code">
+                <a href="patreon/cooperativeBankQR.PNG" download style="margin-top: 15px;">Download QR Code</a>
+            </div>
         </div>
     </div>
 
